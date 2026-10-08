@@ -80,6 +80,18 @@
       transform: translateY(-10px);
     }
   }
+
+  /* Reveals "..." one dot at a time: none, 1, 2, 3, then restarts. */
+  --animate-dots: dots 2s steps(4, jump-none) infinite;
+
+  @keyframes dots {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
 }
 
 body {
