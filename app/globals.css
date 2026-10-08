@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+/* Brand palette: red / white / black */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --red: #c8102e;
+  --red-bright: #e31b30;
+  --red-deep: #9e0b1e;
+  --ink: #111111;
+}
+
+/* Light theme (default): off-white surfaces, red text */
+:root,
+:root[data-theme="light"] {
+  --topbar: #f1e8e5;
+  --nav: #fbf7f6;
+  --hero: #f8f1ef;
+  --hero-glow-1: #fde3e5;
+  --hero-glow-2: #f6e4e1;
+  --fg: var(--red);
+  --body: var(--red-deep);
+  --line: var(--red);
+  --btn: var(--red);
+  --btn-fg: #ffffff;
+  --tile: rgb(200 16 46 / 0.1);
+  --tile-fg: var(--red);
+  --logo-mark: var(--red);
+  --logo-mark-fg: #ffffff;
+}
+
+/* Dark theme: red surfaces, white text */
+:root[data-theme="dark"] {
+  --topbar: var(--red);
+  --nav: #0f0f10;
+  --hero: var(--red-deep);
+  --hero-glow-1: var(--red-bright);
+  --hero-glow-2: var(--red);
+  --fg: #ffffff;
+  --body: rgb(255 255 255 / 0.9);
+  --line: #ffffff;
+  --btn: #ffffff;
+  --btn-fg: var(--ink);
+  --tile: rgb(255 255 255 / 0.25);
+  --tile-fg: #4d0711;
+  --logo-mark: #ffffff;
+  --logo-mark-fg: var(--red);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-raleway);
+  --font-logo: var(--font-nunito);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Fixed brand colors */
+  --color-brand-red: var(--red);
+  --color-brand-red-bright: var(--red-bright);
+  --color-brand-ink: var(--ink);
+
+  /* Theme-aware semantic colors */
+  --color-topbar: var(--topbar);
+  --color-nav: var(--nav);
+  --color-hero: var(--hero);
+  --color-fg: var(--fg);
+  --color-body: var(--body);
+  --color-line: var(--line);
+  --color-btn: var(--btn);
+  --color-btn-fg: var(--btn-fg);
+  --color-tile: var(--tile);
+  --color-tile-fg: var(--tile-fg);
+  --color-logo-mark: var(--logo-mark);
+  --color-logo-mark-fg: var(--logo-mark-fg);
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--hero);
+  color: var(--fg);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
