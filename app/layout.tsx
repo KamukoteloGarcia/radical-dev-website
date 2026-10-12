@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import { site } from "@/config/site";
-import { getLanguage, getTheme } from "@/lib/preferences";
+import { getContent, getLanguage, getTheme } from "@/lib/preferences";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -15,28 +15,33 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: site.title,
-    template: `%s | ${site.name}`,
-  },
-  description: site.description,
-  applicationName: site.name,
-  openGraph: {
-    type: "website",
-    siteName: site.name,
-    title: site.title,
-    description: site.description,
-    url: "/",
-    locale: site.locale,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: site.title,
-    description: site.description,
-  },
-};
+// Title and description follow the visitor's language.
+export async function generateMetadata(): Promise<Metadata> {
+  const { meta } = await getContent();
+
+  return {
+    metadataBase: new URL(site.url),
+    title: {
+      default: meta.title,
+      template: `%s | ${site.name}`,
+    },
+    description: meta.description,
+    applicationName: site.name,
+    openGraph: {
+      type: "website",
+      siteName: site.name,
+      title: meta.title,
+      description: meta.description,
+      url: "/",
+      locale: meta.locale,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+    },
+  };
+}
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const [language, theme] = await Promise.all([getLanguage(), getTheme()]);

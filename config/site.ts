@@ -8,13 +8,9 @@ function siteUrl() {
   return "http://localhost:3000";
 }
 
-// Site-wide metadata used for SEO and link previews.
+// Site-wide values. Translated title/description live in content `meta`.
 export const site = {
   name: "Radical dev",
-  title: "Radical dev | Revolucionando o desenvolvimento com propósito",
   tagline: "Revolucionando o desenvolvimento com propósito.",
-  description:
-    "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
   url: siteUrl(),
-  locale: "pt_AO",
 };

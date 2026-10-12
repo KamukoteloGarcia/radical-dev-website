@@ -53,3 +53,17 @@ export const sectorPhotos: Record<SectorId, string> = {
 
 // Avatars for the quotes, in the same order as content `quotes.items`.
 export const quotePhotos = [1, 2, 3, 4, 5].map((n) => `/photos/quotes/${n}.webp`);
+
+// Innovation page: lab section photo.
+export const innovationPhotos = {
+  lab: "/photos/innovation/lab.webp",
+};
+
+// Innovation page: featured projects (keys match content `innovation.projects.items[].id`).
+export const projectPhotos = {
+  community: "/photos/projects/community.webp",
+  fintech: "/photos/projects/fintech.webp",
+  corporate: "/photos/projects/corporate.webp",
+};
+
+export type ProjectId = keyof typeof projectPhotos;

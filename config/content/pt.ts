@@ -1,6 +1,8 @@
 import type { BannerId } from "@/config/banners";
 import type { HeroSlideId } from "@/config/hero";
-import type { ScreenId } from "@/config/photos";
+import type { InnovationClipId } from "@/config/innovation";
+import { careersPt } from "./careers/pt";
+import type { ProjectId, ScreenId } from "@/config/photos";
 
 type Slide = { id: BannerId; title: string; text: string };
 
@@ -27,19 +29,30 @@ type Sector = {
   statLabel: string;
 };
 type Reason = { icon: ReasonIcon; title: string; text: string };
+
+export type LabFeatureIcon = "research" | "prototype" | "agile" | "scale";
+type LabFeature = { icon: LabFeatureIcon; label: string };
+type Project = { id: ProjectId; name: string; tag: string; href: string };
 type Quote = { text: string; author: string; role: string };
 
 export const pt = {
+  meta: {
+    title: "Radical dev | Revolucionando o desenvolvimento com propósito",
+    description:
+      "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
+    locale: "pt_AO",
+  },
+
   segments: ["Institucional", "Privadas", "Particulares", "ONGs"],
 
   links: [
-    { label: "Início", href: "#inicio" },
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Inovação", href: "#inovacao" },
-    { label: "Ecossistema", href: "#ecossistema" },
-    { label: "Carreiras", href: "#carreiras" },
+    { label: "Início", href: "/" },
+    { label: "Serviços", href: "/#solucoes" },
+    { label: "Inovação", href: "/inovacao" },
+    { label: "Ecossistema", href: "/#ecossistema" },
+    { label: "Carreiras", href: "/carreiras" },
     { label: "Contactos", href: "#contactos" },
-    { label: "Sobre Nós", href: "#sobre" },
+    { label: "Sobre Nós", href: "/#sobre" },
   ],
 
   hero: {
@@ -48,7 +61,7 @@ export const pt = {
       lines: [" o", "desenvolvimento", "com propósito."],
       description:
         "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
-      primary: { label: "Explore nossas soluções", href: "#solucoes" },
+      primary: { label: "Explore nossas soluções", href: "/#solucoes" },
       secondary: { label: "Entre em contato", href: "#contactos" },
     },
     web: {
@@ -56,7 +69,7 @@ export const pt = {
       lines: ["", "rápidas, seguras", "e escaláveis."],
       description:
         "Portais, lojas online e sistemas de gestão à medida, com desempenho de nível mundial e foco no seu negócio.",
-      primary: { label: "Ver soluções web", href: "#solucoes" },
+      primary: { label: "Ver soluções web", href: "/#solucoes" },
       secondary: { label: "Fale com um especialista", href: "#contactos" },
     },
     data: {
@@ -64,7 +77,7 @@ export const pt = {
       lines: [" que viram", "decisões", "inteligentes."],
       description:
         "Dashboards, Business Intelligence e inteligência artificial para transformar informação em resultados reais.",
-      primary: { label: "Conhecer dados & IA", href: "#inovacao" },
+      primary: { label: "Conhecer dados & IA", href: "/inovacao" },
       secondary: { label: "Pedir uma demonstração", href: "#contactos" },
     },
     design: {
@@ -72,7 +85,7 @@ export const pt = {
       lines: ["", "digitais que", "as pessoas amam."],
       description:
         "Design UX/UI centrado nas pessoas, da pesquisa com utilizadores ao produto final pronto a crescer.",
-      primary: { label: "Ver o nosso design", href: "#solucoes" },
+      primary: { label: "Ver o nosso design", href: "/#solucoes" },
       secondary: { label: "Começar um projeto", href: "#contactos" },
     },
     team: {
@@ -80,8 +93,8 @@ export const pt = {
       lines: [" angolano,", "impacto", "global."],
       description:
         "Engenheiros, designers e consultores dedicados a fazer o seu projeto acontecer, com rigor e paixão.",
-      primary: { label: "Conhecer a equipa", href: "#sobre" },
-      secondary: { label: "Trabalhe connosco", href: "#carreiras" },
+      primary: { label: "Conhecer a equipa", href: "/#sobre" },
+      secondary: { label: "Trabalhe connosco", href: "/carreiras" },
     },
   } satisfies Record<HeroSlideId, HeroText>,
 
@@ -235,6 +248,52 @@ export const pt = {
     next: "Citação seguinte",
   },
 
+  innovation: {
+    meta: {
+      title: "Inovação",
+      description:
+        "Inteligência artificial, cloud e dados: a Radical dev transforma ideias em tecnologia real para empresas e instituições.",
+    },
+    eyebrow: "Laboratório de inovação",
+    title: "Inovação que transforma ideias em",
+    highlight: "tecnologia real.",
+    text: "Engenheiros, designers e especialistas em dados a trabalhar lado a lado: da primeira ideia ao protótipo, do protótipo à cloud.",
+    cta: { label: "Explorar projectos", href: "#projectos" },
+    chapters: {
+      prototype: "Prototipagem & Hardware",
+      product: "Produto & Dados",
+      cloud: "Cloud & Infraestrutura",
+    } satisfies Record<InnovationClipId, string>,
+    controls: { chapters: "Cenas do vídeo", goTo: "Ver cena", pause: "Pausar vídeo", play: "Reproduzir vídeo" },
+
+    lab: {
+      title: "Onde as ideias ganham forma.",
+      text: "O nosso laboratório de inovação é o coração da Radical dev. Juntamos pesquisa, criatividade e engenharia para transformar ideias em soluções robustas, prontas para o mercado global.",
+      features: [
+        { icon: "research", label: "Pesquisa aplicada" },
+        { icon: "prototype", label: "Prototipagem rápida" },
+        { icon: "agile", label: "Desenvolvimento ágil" },
+        { icon: "scale", label: "Escalabilidade global" },
+      ] as LabFeature[],
+      cta: { label: "Entrar em contacto", href: "#contactos" },
+      imageAlt: "Programador a escrever código num portátil e num monitor",
+    },
+
+    projects: {
+      title: "Projectos em Destaque",
+      subtitle: "Soluções que já estão a transformar o mercado.",
+      more: { label: "Ver mais", href: "/#sectores" },
+      view: "Ver projecto",
+      items: [
+        { id: "community", name: "Kanda Solidária", tag: "ONGs / Voluntariado", href: "#contactos" },
+        { id: "fintech", name: "Kumbu Pay", tag: "IA / Banca", href: "#contactos" },
+        { id: "corporate", name: "Kianda Corporate", tag: "Web Institucional", href: "#contactos" },
+      ] as Project[],
+    },
+  },
+
+  careers: careersPt,
+
   footer: {
     cta: {
       eyebrow: "Pronto para começar?",
@@ -248,21 +307,21 @@ export const pt = {
       {
         title: "Soluções",
         links: [
-          { label: "Desenvolvimento web", href: "#solucoes" },
-          { label: "Apps móveis", href: "#solucoes" },
-          { label: "Dados & IA", href: "#inovacao" },
-          { label: "Design UX/UI", href: "#solucoes" },
-          { label: "Cloud & DevOps", href: "#solucoes" },
+          { label: "Desenvolvimento web", href: "/#solucoes" },
+          { label: "Apps móveis", href: "/#solucoes" },
+          { label: "Dados & IA", href: "/inovacao" },
+          { label: "Design UX/UI", href: "/#solucoes" },
+          { label: "Cloud & DevOps", href: "/#solucoes" },
         ],
       },
       {
         title: "Empresa",
         links: [
-          { label: "Sobre nós", href: "#sobre" },
-          { label: "Inovação", href: "#inovacao" },
-          { label: "Ecossistema", href: "#ecossistema" },
-          { label: "Carreiras", href: "#carreiras" },
-          { label: "Academia Radical", href: "#carreiras" },
+          { label: "Sobre nós", href: "/#sobre" },
+          { label: "Inovação", href: "/inovacao" },
+          { label: "Ecossistema", href: "/#ecossistema" },
+          { label: "Carreiras", href: "/carreiras" },
+          { label: "Academia Radical", href: "/carreiras" },
         ],
       },
     ],

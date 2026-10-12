@@ -405,3 +405,29 @@ export function UsersIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function FlaskIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M9 3h6M10 3v6.5L4.6 18.4A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.4-2.6L14 9.5V3" />
+      <path d="M7.5 14.5h9" />
+    </Icon>
+  );
+}
+
+export function CompassIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="5" r="2" />
+      <path d="m11 6.8-5 14.2M13 6.8l5 14.2M7.6 16.5a10 10 0 0 0 8.8 0" />
+    </Icon>
+  );
+}
+
+export function ArrowUpRightIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M7 17 17 7M8 7h9v9" />
+    </Icon>
+  );
+}

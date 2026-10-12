@@ -16,7 +16,7 @@ export async function Quotes() {
       <h2 id="testemunhos-titulo" className="sr-only">
         {quotes.label}
       </h2>
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
+      <div className="container-site">
         <QuoteCarousel
           items={quotes.items}
           photos={quotePhotos}

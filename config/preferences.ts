@@ -2,7 +2,10 @@
 export const languages = ["pt", "en"] as const;
 export type Language = (typeof languages)[number];
 
-export const themes = ["dark", "light"] as const;
+// Transition type tagged on language switches, so only they animate the page.
+export const languageTransition = "language";
+
+export const themes =["dark", "light"] as const;
 export type Theme = (typeof themes)[number];
 
 export const cookieNames = {

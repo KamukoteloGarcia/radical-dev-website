@@ -99,7 +99,7 @@ export function HeroCarousel({ children, tones, intervalMs, labels }: HeroCarous
 
       <div
         data-theme={tones[active]}
-        className="relative z-20 mx-auto max-w-[1440px] px-5 pb-8 sm:px-8 lg:absolute lg:inset-x-0 lg:bottom-8 lg:px-10 lg:pb-0"
+        className="container-site relative z-20 pb-8 lg:absolute lg:inset-x-0 lg:bottom-8 lg:pb-0"
       >
         <div className="lg:max-w-[620px]">
           <HeroControls
