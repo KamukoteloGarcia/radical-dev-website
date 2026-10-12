@@ -14,6 +14,21 @@ export type HeroText = {
   secondary: Link;
 };
 
+export type SectorId = "banking" | "energy" | "public" | "mining" | "other";
+export type ReasonIcon = "shield" | "chart" | "globe";
+
+type Sector = {
+  id: SectorId;
+  tab: string;
+  title: string;
+  text: string;
+  points: string[];
+  stat: string;
+  statLabel: string;
+};
+type Reason = { icon: ReasonIcon; title: string; text: string };
+type Quote = { text: string; author: string; role: string };
+
 export const pt = {
   segments: ["Institucional", "Privadas", "Particulares", "ONGs"],
 
@@ -97,6 +112,171 @@ export const pt = {
   },
 
   stats: { title: "Desempenho", deliveries: "Entregas", clients: "Clientes" },
+
+  solutions: {
+    title: "Soluções Corporativas Institucionais",
+    subtitle:
+      "Arquitectura de software desenhada para a complexidade e rigor das instituições públicas e organizações do terceiro sector.",
+    featured: {
+      title: "Institucional",
+      text: "Parceiro estratégico para a Administração Pública, garantindo a modernização administrativa e a eficiência governativa através de sistemas de alta criticidade.",
+      features: ["Websites Institucionais", "Apps Governamentais", "Sistemas e-Gov", "Cibersegurança"],
+      cta: { label: "Pedir Orçamento", href: "#contactos" },
+    },
+    cards: [
+      {
+        title: "Instituições Governamentais",
+        text: "Foco na modernização governamental e soberania digital, com plataformas seguras e interoperáveis.",
+      },
+      {
+        title: "Instituições Não Governamentais",
+        text: "Tecnologia para impacto social e ferramentas avançadas de gestão de projectos e doadores.",
+      },
+    ],
+    more: "Saber mais",
+  },
+
+  sectors: {
+    title: "Especialização Sectorial",
+    explore: "Explorar",
+    items: [
+      {
+        id: "banking",
+        tab: "Banca e Finanças",
+        title: "O seu site ou loja online, do zero ao ar",
+        text: "Desenhamos e desenvolvemos o seu site pessoal, portfólio ou loja online, com uma apresentação profissional e fácil de gerir — sem que precise de escrever uma linha de código.",
+        points: ["Conversa inicial para entender a sua ideia", "Design e desenvolvimento à sua medida", "Site publicado e pronto a partilhar"],
+        stat: "+40",
+        statLabel: "Instituições confiaram em nós",
+      },
+      {
+        id: "energy",
+        tab: "Energia e Petróleo",
+        title: "Operações industriais ligadas e seguras",
+        text: "Sistemas de monitorização, manutenção e segurança para operações onshore e offshore, com dados em tempo real para decidir mais depressa.",
+        points: ["Monitorização de activos em tempo real", "Gestão de manutenção preventiva", "Relatórios de segurança e conformidade"],
+        stat: "+15",
+        statLabel: "Operações digitalizadas",
+      },
+      {
+        id: "public",
+        tab: "Administração Pública",
+        title: "Serviços públicos digitais para o cidadão",
+        text: "Portais, balcões únicos e sistemas de gestão documental que aproximam o Estado do cidadão, com transparência e segurança.",
+        points: ["Balcão único digital", "Gestão documental e processos", "Integração entre ministérios"],
+        stat: "+25",
+        statLabel: "Entidades públicas servidas",
+      },
+      {
+        id: "mining",
+        tab: "Recursos Minerais",
+        title: "Gestão mineira com dados de campo",
+        text: "Aplicações para equipas no terreno, rastreabilidade da produção e relatórios ambientais, mesmo em zonas com pouca rede.",
+        points: ["Recolha de dados no terreno, offline", "Rastreabilidade da produção", "Relatórios ambientais e de licenciamento"],
+        stat: "+10",
+        statLabel: "Projectos mineiros apoiados",
+      },
+      {
+        id: "other",
+        tab: "Outros",
+        title: "Soluções à medida para o seu sector",
+        text: "Saúde, educação, logística, comércio e muito mais: analisamos o seu desafio e construímos a solução certa com a nossa equipa.",
+        points: ["Diagnóstico gratuito do projecto", "Equipa dedicada do início ao fim", "Suporte e evolução contínua"],
+        stat: "+120",
+        statLabel: "Projectos entregues",
+      },
+    ] as Sector[],
+  },
+
+  whyUs: {
+    title: "Por que as instituições escolhem a Radical dev?",
+    subtitle: "Mais do que tecnologia — somos um parceiro estratégico que entende Angola, os seus desafios e as suas ambições.",
+    reasons: [
+      { icon: "shield", title: "Soberania Digital", text: "Protecção robusta de dados críticos com infraestrutura nacional soberana." },
+      { icon: "chart", title: "Eficiência Total", text: "Digitalização de processos complexos para acelerar serviços ao cidadão." },
+      { icon: "globe", title: "Modernização e-Gov", text: "Transformação digital completa para máxima transparência institucional." },
+    ] as Reason[],
+    partners: "Instituições que confiam em nós",
+    pausePartners: "Pausar carrossel de instituições",
+    playPartners: "Retomar carrossel de instituições",
+  },
+
+  quotes: {
+    label: "O que dizem sobre nós",
+    items: [
+      {
+        text: "Na Radical dev, não encaramos a conformidade regulamentar como um mero dever burocrático, mas como o verdadeiro motor de solidez que credibiliza as soluções digitais que desenvolvemos para impulsionar o futuro de Angola.",
+        author: "Conselho de Administração",
+        role: "Radical dev • Direcção de Governança & Risco",
+      },
+      {
+        text: "A plataforma desenvolvida pela Radical dev reduziu para metade o tempo de resposta aos nossos clientes. Uma parceria que transformou a nossa operação.",
+        author: "Director de Sistemas de Informação",
+        role: "Kwanza Bank • Transformação Digital",
+      },
+      {
+        text: "Encontrámos uma equipa que entende Angola, os nossos desafios e as nossas ambições. O resultado superou todas as expectativas.",
+        author: "Directora Executiva",
+        role: "Lumen Saúde • Direcção Geral",
+      },
+      {
+        text: "Com os dashboards da Radical dev passámos a decidir com dados em tempo real. Hoje a nossa logística é mais rápida e previsível.",
+        author: "Director de Operações",
+        role: "Atlas Logística • Operações",
+      },
+      {
+        text: "A Academia Radical formou a nossa equipa com rigor e proximidade. Ganhámos autonomia e uma verdadeira cultura digital.",
+        author: "Gestora de Recursos Humanos",
+        role: "Mukanda Educação • Talento & Cultura",
+      },
+    ] as Quote[],
+    goTo: "Ver citação",
+    previous: "Citação anterior",
+    next: "Citação seguinte",
+  },
+
+  footer: {
+    cta: {
+      eyebrow: "Pronto para começar?",
+      title: "Vamos construir o futuro juntos.",
+      text: "Conte-nos a sua ideia e transformamo-la numa solução digital de impacto.",
+      button: { label: "Iniciar um projeto", href: "#contactos" },
+    },
+    about:
+      "Tecnologia com propósito para empresas, governos e startups. Desenvolvemos soluções digitais que impulsionam Angola e o mundo.",
+    columns: [
+      {
+        title: "Soluções",
+        links: [
+          { label: "Desenvolvimento web", href: "#solucoes" },
+          { label: "Apps móveis", href: "#solucoes" },
+          { label: "Dados & IA", href: "#inovacao" },
+          { label: "Design UX/UI", href: "#solucoes" },
+          { label: "Cloud & DevOps", href: "#solucoes" },
+        ],
+      },
+      {
+        title: "Empresa",
+        links: [
+          { label: "Sobre nós", href: "#sobre" },
+          { label: "Inovação", href: "#inovacao" },
+          { label: "Ecossistema", href: "#ecossistema" },
+          { label: "Carreiras", href: "#carreiras" },
+          { label: "Academia Radical", href: "#carreiras" },
+        ],
+      },
+    ],
+    contactTitle: "Contactos",
+    hours: "Seg – Sex, 8h às 17h",
+    followUs: "Siga-nos",
+    rights: "Todos os direitos reservados.",
+    legal: [
+      { label: "Privacidade", href: "#privacidade" },
+      { label: "Termos de uso", href: "#termos" },
+      { label: "Cookies", href: "#cookies" },
+    ],
+    backToTop: "Voltar ao topo",
+  },
 
   a11y: {
     home: "Radical dev — página inicial",

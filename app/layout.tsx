@@ -45,6 +45,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang={language}
       data-theme={theme}
+      data-scroll-behavior="smooth"
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>

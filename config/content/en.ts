@@ -84,6 +84,171 @@ export const en: Content = {
 
   stats: { title: "Performance", deliveries: "Deliveries", clients: "Clients" },
 
+  solutions: {
+    title: "Institutional Corporate Solutions",
+    subtitle:
+      "Software architecture designed for the complexity and rigour of public institutions and third-sector organisations.",
+    featured: {
+      title: "Institutional",
+      text: "Strategic partner for Public Administration, ensuring administrative modernisation and government efficiency through mission-critical systems.",
+      features: ["Institutional Websites", "Government Apps", "e-Gov Systems", "Cybersecurity"],
+      cta: { label: "Request a Quote", href: "#contactos" },
+    },
+    cards: [
+      {
+        title: "Government Institutions",
+        text: "Focused on government modernisation and digital sovereignty, with secure, interoperable platforms.",
+      },
+      {
+        title: "Non-Governmental Institutions",
+        text: "Technology for social impact and advanced tools to manage projects and donors.",
+      },
+    ],
+    more: "Learn more",
+  },
+
+  sectors: {
+    title: "Sector Expertise",
+    explore: "Explore",
+    items: [
+      {
+        id: "banking",
+        tab: "Banking & Finance",
+        title: "Your website or online store, from zero to live",
+        text: "We design and build your personal site, portfolio or online store, with a professional look that is easy to manage — without you writing a single line of code.",
+        points: ["Kick-off chat to understand your idea", "Tailor-made design and development", "Site published and ready to share"],
+        stat: "+40",
+        statLabel: "Institutions trusted us",
+      },
+      {
+        id: "energy",
+        tab: "Energy & Oil",
+        title: "Connected, safe industrial operations",
+        text: "Monitoring, maintenance and safety systems for onshore and offshore operations, with real-time data to decide faster.",
+        points: ["Real-time asset monitoring", "Preventive maintenance management", "Safety and compliance reports"],
+        stat: "+15",
+        statLabel: "Operations digitised",
+      },
+      {
+        id: "public",
+        tab: "Public Administration",
+        title: "Digital public services for citizens",
+        text: "Portals, one-stop shops and document management systems that bring the State closer to citizens, with transparency and security.",
+        points: ["Digital one-stop shop", "Document and process management", "Integration across ministries"],
+        stat: "+25",
+        statLabel: "Public bodies served",
+      },
+      {
+        id: "mining",
+        tab: "Mineral Resources",
+        title: "Mining management with field data",
+        text: "Apps for field teams, production traceability and environmental reporting, even in areas with poor coverage.",
+        points: ["Offline field data collection", "Production traceability", "Environmental and licensing reports"],
+        stat: "+10",
+        statLabel: "Mining projects supported",
+      },
+      {
+        id: "other",
+        tab: "Others",
+        title: "Tailor-made solutions for your sector",
+        text: "Health, education, logistics, retail and more: we analyse your challenge and build the right solution with our team.",
+        points: ["Free project assessment", "Dedicated team from start to finish", "Ongoing support and evolution"],
+        stat: "+120",
+        statLabel: "Projects delivered",
+      },
+    ],
+  },
+
+  whyUs: {
+    title: "Why do institutions choose Radical dev?",
+    subtitle: "More than technology — we are a strategic partner that understands Angola, its challenges and its ambitions.",
+    reasons: [
+      { icon: "shield", title: "Digital Sovereignty", text: "Robust protection of critical data on sovereign national infrastructure." },
+      { icon: "chart", title: "Total Efficiency", text: "Digitising complex processes to speed up services for citizens." },
+      { icon: "globe", title: "e-Gov Modernisation", text: "End-to-end digital transformation for maximum institutional transparency." },
+    ],
+    partners: "Institutions that trust us",
+    pausePartners: "Pause institutions carousel",
+    playPartners: "Resume institutions carousel",
+  },
+
+  quotes: {
+    label: "What people say about us",
+    items: [
+      {
+        text: "At Radical dev, we don't see regulatory compliance as mere red tape, but as the real driver of soundness that gives credibility to the digital solutions we build to power Angola's future.",
+        author: "Board of Directors",
+        role: "Radical dev • Governance & Risk",
+      },
+      {
+        text: "The platform built by Radical dev cut our customer response time in half. A partnership that transformed our operation.",
+        author: "Head of Information Systems",
+        role: "Kwanza Bank • Digital Transformation",
+      },
+      {
+        text: "We found a team that understands Angola, our challenges and our ambitions. The result exceeded every expectation.",
+        author: "Chief Executive",
+        role: "Lumen Saúde • General Management",
+      },
+      {
+        text: "With Radical dev's dashboards we now decide with real-time data. Our logistics are faster and more predictable.",
+        author: "Head of Operations",
+        role: "Atlas Logística • Operations",
+      },
+      {
+        text: "Radical Academy trained our team with rigour and care. We gained autonomy and a true digital culture.",
+        author: "HR Manager",
+        role: "Mukanda Educação • Talent & Culture",
+      },
+    ],
+    goTo: "Show quote",
+    previous: "Previous quote",
+    next: "Next quote",
+  },
+
+  footer: {
+    cta: {
+      eyebrow: "Ready to start?",
+      title: "Let's build the future together.",
+      text: "Tell us your idea and we'll turn it into a high-impact digital solution.",
+      button: { label: "Start a project", href: "#contactos" },
+    },
+    about:
+      "Technology with purpose for companies, governments and startups. We build digital solutions that move Angola and the world forward.",
+    columns: [
+      {
+        title: "Solutions",
+        links: [
+          { label: "Web development", href: "#solucoes" },
+          { label: "Mobile apps", href: "#solucoes" },
+          { label: "Data & AI", href: "#inovacao" },
+          { label: "UX/UI design", href: "#solucoes" },
+          { label: "Cloud & DevOps", href: "#solucoes" },
+        ],
+      },
+      {
+        title: "Company",
+        links: [
+          { label: "About us", href: "#sobre" },
+          { label: "Innovation", href: "#inovacao" },
+          { label: "Ecosystem", href: "#ecossistema" },
+          { label: "Careers", href: "#carreiras" },
+          { label: "Radical Academy", href: "#carreiras" },
+        ],
+      },
+    ],
+    contactTitle: "Contact",
+    hours: "Mon – Fri, 8am to 5pm",
+    followUs: "Follow us",
+    rights: "All rights reserved.",
+    legal: [
+      { label: "Privacy", href: "#privacidade" },
+      { label: "Terms of use", href: "#termos" },
+      { label: "Cookies", href: "#cookies" },
+    ],
+    backToTop: "Back to top",
+  },
+
   a11y: {
     home: "Radical dev — home page",
     main: "Main",

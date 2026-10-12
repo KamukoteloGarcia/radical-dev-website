@@ -1,12 +1,14 @@
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "outline";
+type Variant = "primary" | "outline" | "inverse";
 
 const variants: Record<Variant, string> = {
   primary:
     "bg-[linear-gradient(135deg,var(--red),var(--red-deep))] text-white ring-1 ring-red-bright/40 shadow-[0_10px_34px_-8px_var(--glow)] hover:brightness-110",
   outline: "border border-fg/70 text-fg hover:border-fg hover:bg-fg/5",
+  // White button for use on red backgrounds.
+  inverse: "bg-white text-red-deep shadow-[0_12px_30px_-10px_rgba(0,0,0,0.45)] hover:bg-white/90",
 };
 
 type ButtonLinkProps = ComponentProps<"a"> & { variant?: Variant };
