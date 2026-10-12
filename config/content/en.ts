@@ -11,13 +11,13 @@ export const en: Content = {
   segments: ["Institutional", "Private", "Individuals", "NGOs"],
 
   links: [
-    { label: "Home", href: "#inicio" },
-    { label: "Solutions", href: "#solucoes" },
-    { label: "Innovation", href: "#inovacao" },
-    { label: "Ecosystem", href: "#ecossistema" },
-    { label: "Careers", href: "#carreiras" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/#solucoes" },
+    { label: "Innovation", href: "/inovacao" },
+    { label: "Ecosystem", href: "/#ecossistema" },
+    { label: "Careers", href: "/#carreiras" },
     { label: "Contact", href: "#contactos" },
-    { label: "About Us", href: "#sobre" },
+    { label: "About Us", href: "/#sobre" },
   ],
 
   hero: {
@@ -26,7 +26,7 @@ export const en: Content = {
       lines: ["", "development", "with purpose."],
       description:
         "Disruptive digital solutions for companies, governments and startups, driving national and global progress through cutting-edge technology.",
-      primary: { label: "Explore our solutions", href: "#solucoes" },
+      primary: { label: "Explore our solutions", href: "/#solucoes" },
       secondary: { label: "Get in touch", href: "#contactos" },
     },
     web: {
@@ -34,7 +34,7 @@ export const en: Content = {
       lines: ["", "fast, secure", "and scalable."],
       description:
         "Tailor-made portals, online stores and management systems with world-class performance and a focus on your business.",
-      primary: { label: "See web solutions", href: "#solucoes" },
+      primary: { label: "See web solutions", href: "/#solucoes" },
       secondary: { label: "Talk to an expert", href: "#contactos" },
     },
     data: {
@@ -42,7 +42,7 @@ export const en: Content = {
       lines: [" that becomes", "smart", "decisions."],
       description:
         "Dashboards, Business Intelligence and artificial intelligence that turn information into real results.",
-      primary: { label: "Discover data & AI", href: "#inovacao" },
+      primary: { label: "Discover data & AI", href: "/inovacao" },
       secondary: { label: "Request a demo", href: "#contactos" },
     },
     design: {
@@ -50,7 +50,7 @@ export const en: Content = {
       lines: [" experiences", "people", "love."],
       description:
         "People-centred UX/UI design, from user research to a final product ready to grow.",
-      primary: { label: "See our design", href: "#solucoes" },
+      primary: { label: "See our design", href: "/#solucoes" },
       secondary: { label: "Start a project", href: "#contactos" },
     },
     team: {
@@ -58,8 +58,8 @@ export const en: Content = {
       lines: [" talent,", "global", "impact."],
       description:
         "Engineers, designers and consultants dedicated to making your project happen, with rigour and passion.",
-      primary: { label: "Meet the team", href: "#sobre" },
-      secondary: { label: "Work with us", href: "#carreiras" },
+      primary: { label: "Meet the team", href: "/#sobre" },
+      secondary: { label: "Work with us", href: "/#carreiras" },
     },
   },
 
@@ -213,6 +213,50 @@ export const en: Content = {
     next: "Next quote",
   },
 
+  innovation: {
+    meta: {
+      title: "Innovation",
+      description:
+        "Artificial intelligence, cloud and data: Radical dev turns ideas into real technology for companies and institutions.",
+    },
+    eyebrow: "Innovation lab",
+    title: "Innovation that turns ideas into",
+    highlight: "real technology.",
+    text: "Engineers, designers and data specialists working side by side: from the first idea to a prototype, from prototype to the cloud.",
+    cta: { label: "Explore projects", href: "#projectos" },
+    chapters: {
+      prototype: "Prototyping & Hardware",
+      product: "Product & Data",
+      cloud: "Cloud & Infrastructure",
+    },
+    controls: { chapters: "Video scenes", goTo: "Show scene", pause: "Pause video", play: "Play video" },
+
+    lab: {
+      title: "Where ideas take shape.",
+      text: "Our innovation lab is the heart of Radical dev. We bring together research, creativity and engineering to turn ideas into robust solutions, ready for the global market.",
+      features: [
+        { icon: "research", label: "Applied research" },
+        { icon: "prototype", label: "Rapid prototyping" },
+        { icon: "agile", label: "Agile development" },
+        { icon: "scale", label: "Global scalability" },
+      ],
+      cta: { label: "Get in touch", href: "#contactos" },
+      imageAlt: "Developer writing code on a laptop and a monitor",
+    },
+
+    projects: {
+      title: "Featured Projects",
+      subtitle: "Solutions that are already transforming the market.",
+      more: { label: "See more", href: "/#sectores" },
+      view: "View project",
+      items: [
+        { id: "community", name: "Kanda Solidária", tag: "NGOs / Volunteering", href: "#contactos" },
+        { id: "fintech", name: "Kumbu Pay", tag: "AI / Banking", href: "#contactos" },
+        { id: "corporate", name: "Kianda Corporate", tag: "Corporate Web", href: "#contactos" },
+      ],
+    },
+  },
+
   footer: {
     cta: {
       eyebrow: "Ready to start?",
@@ -226,21 +270,21 @@ export const en: Content = {
       {
         title: "Solutions",
         links: [
-          { label: "Web development", href: "#solucoes" },
-          { label: "Mobile apps", href: "#solucoes" },
-          { label: "Data & AI", href: "#inovacao" },
-          { label: "UX/UI design", href: "#solucoes" },
-          { label: "Cloud & DevOps", href: "#solucoes" },
+          { label: "Web development", href: "/#solucoes" },
+          { label: "Mobile apps", href: "/#solucoes" },
+          { label: "Data & AI", href: "/inovacao" },
+          { label: "UX/UI design", href: "/#solucoes" },
+          { label: "Cloud & DevOps", href: "/#solucoes" },
         ],
       },
       {
         title: "Company",
         links: [
-          { label: "About us", href: "#sobre" },
-          { label: "Innovation", href: "#inovacao" },
-          { label: "Ecosystem", href: "#ecossistema" },
-          { label: "Careers", href: "#carreiras" },
-          { label: "Radical Academy", href: "#carreiras" },
+          { label: "About us", href: "/#sobre" },
+          { label: "Innovation", href: "/inovacao" },
+          { label: "Ecosystem", href: "/#ecossistema" },
+          { label: "Careers", href: "/#carreiras" },
+          { label: "Radical Academy", href: "/#carreiras" },
         ],
       },
     ],
