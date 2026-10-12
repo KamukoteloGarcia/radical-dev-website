@@ -1,17 +1,20 @@
 import { Logo } from "@/components/brand/Logo";
+import { getContent } from "@/lib/preferences";
 import { MobileNav } from "./MobileNav";
 import { NavLinks } from "./NavLinks";
 
-export function Navbar() {
+export async function Navbar() {
+  const { links, a11y } = await getContent();
+
   return (
-    <header className="relative z-30 border-b border-line/10 bg-nav">
-      <div className="flex h-[86px] items-center justify-between px-4 sm:px-[56px] xl:pr-[38px]">
-        <Logo />
-        <nav aria-label="Principal" className="hidden xl:block">
-          <NavLinks />
+    <div className="relative border-b border-line bg-nav">
+      <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-10">
+        <Logo label={a11y.home} />
+        <nav aria-label={a11y.main} className="hidden lg:block">
+          <NavLinks links={links} />
         </nav>
-        <MobileNav />
+        <MobileNav links={links} labels={{ open: a11y.openMenu, close: a11y.closeMenu, menu: a11y.main }} />
       </div>
-    </header>
+    </div>
   );
 }

@@ -1,41 +1,36 @@
-import { ArrowRightIcon, ChatIcon } from "@/components/icons";
+import { ArrowRightIcon } from "@/components/icons";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { heroContent } from "@/config/hero";
+import { getContent } from "@/lib/preferences";
 
-export function HeroContent() {
-  const { title, description, primaryCta, secondaryCta } = heroContent;
+export async function HeroContent() {
+  const { hero } = await getContent();
+  const [firstLine, ...otherLines] = hero.lines;
 
   return (
-    <div className="min-w-0 max-w-[660px] flex-1">
-      <h1 className="font-display text-[44px] font-extrabold leading-[0.95] tracking-[-0.01em] sm:text-[64px] lg:text-[62px] xl:text-[70px] 2xl:text-[78px] 2xl:leading-[0.9]">
-        {title[0]} <br className="hidden sm:block" />
-        {title[1]}
+    <div className="relative z-10 w-full min-w-0 max-w-[620px] lg:flex-1">
+      <h1 className="font-display text-[1.9rem] font-semibold min-[380px]:text-[2.1rem] sm:text-[3.2rem] lg:text-[clamp(2.6rem,4.2vw,4rem)] leading-[1.1] tracking-[-0.02em] text-fg motion-safe:animate-rise">
+        <span className="block">
+          <span className="text-red">{hero.highlight}</span>
+          {firstLine}
+        </span>
+        {otherLines.map((line) => (
+          <span key={line} className="block">
+            {line}
+          </span>
+        ))}
       </h1>
 
-      <p className="mt-6 max-w-[565px] font-display text-[17px] leading-[1.55] text-body sm:mt-[34px] sm:text-[19px] sm:leading-[29px]">
-        {description}
+      <p className="mt-5 max-w-[580px] text-[16px] leading-[1.6] text-muted motion-safe:animate-rise [animation-delay:150ms] sm:mt-6 sm:text-[19px]">
+        {hero.description}
       </p>
 
-      <div className="mt-10 flex flex-col gap-4 sm:mt-[48px] sm:flex-row sm:flex-wrap sm:gap-[21px]">
-        <ButtonLink
-          href={primaryCta.href}
-          className="sm:w-[320px]"
-          icon={
-            <ArrowRightIcon
-              className="size-[26px] transition-transform group-hover:translate-x-1"
-              strokeWidth={2.2}
-            />
-          }
-        >
-          {primaryCta.label}
+      <div className="mt-8 flex flex-col gap-3 motion-safe:animate-rise [animation-delay:300ms] sm:mt-10 sm:flex-row sm:gap-4">
+        <ButtonLink href={hero.primary.href}>
+          {hero.primary.label}
+          <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
         </ButtonLink>
-        <ButtonLink
-          href={secondaryCta.href}
-          variant="outline"
-          className="sm:w-[262px]"
-          icon={<ChatIcon className="size-[24px]" />}
-        >
-          {secondaryCta.label}
+        <ButtonLink href={hero.secondary.href} variant="outline">
+          {hero.secondary.label}
         </ButtonLink>
       </div>
     </div>

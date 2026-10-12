@@ -1,29 +1,36 @@
 "use client";
 
-import { Fragment, useState } from "react";
-import { languages, type Language } from "@/config/navigation";
+import { Fragment, useTransition } from "react";
+import { languages, type Language } from "@/config/preferences";
+import { setLanguage } from "@/lib/actions";
 import { cn } from "@/lib/cn";
 
-export function LanguageSwitcher() {
-  const [language, setLanguage] = useState<Language>("PT");
+type LanguageSwitcherProps = { current: Language; label: string };
+
+export function LanguageSwitcher({ current, label }: LanguageSwitcherProps) {
+  const [isPending, startTransition] = useTransition();
 
   return (
-    <div className="flex items-center gap-[14px] text-[15px] tracking-[0.06em] sm:text-[19px]">
-      {languages.map((lang, index) => (
-        <Fragment key={lang}>
-          {index > 0 && <span aria-hidden="true" className="h-[18px] w-px bg-fg/35" />}
+    <div
+      role="group"
+      aria-label={label}
+      aria-busy={isPending}
+      className={cn("flex items-center gap-2 text-[15px] transition-opacity", isPending && "opacity-60")}
+    >
+      {languages.map((language, i) => (
+        <Fragment key={language}>
+          {i > 0 && <span aria-hidden="true" className="h-4 w-px bg-subtle/60" />}
           <button
             type="button"
-            aria-pressed={language === lang}
-            onClick={() => setLanguage(lang)}
+            lang={language}
+            aria-pressed={language === current}
+            onClick={() => startTransition(() => setLanguage(language))}
             className={cn(
-              "transition-colors",
-              language === lang
-                ? "font-bold text-fg"
-                : "font-medium text-fg/60 hover:text-fg",
+              "uppercase transition-colors",
+              language === current ? "text-red" : "text-muted hover:text-fg",
             )}
           >
-            {lang}
+            {language}
           </button>
         </Fragment>
       ))}
