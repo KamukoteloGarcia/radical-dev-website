@@ -7,9 +7,9 @@
   --red-deep: #a3111c;
 }
 
-/* Dark theme (default) */
+/* Dark theme (default). Also usable on any element via data-theme. */
 :root,
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   --bg: #0b0b0d;
   --topbar: #09090a;
   --nav: #0e0e10;
@@ -23,7 +23,7 @@
 }
 
 /* Light theme */
-:root[data-theme="light"] {
+[data-theme="light"] {
   --bg: #f7f3f2;
   --topbar: #eee6e4;
   --nav: #fcfaf9;
@@ -62,6 +62,53 @@
   --animate-sway: sway 9s ease-in-out infinite;
   --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   --animate-progress: progress 3.5s linear forwards;
+  --animate-hero-in: hero-in 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-hero-out: hero-out 0.8s cubic-bezier(0.4, 0, 0.6, 1) both;
+  --animate-carousel: carousel 15s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+
+  /* Hero banners swap with a 3D turn. --dir is 1 (next) or -1 (previous). */
+  @keyframes hero-in {
+    from {
+      opacity: 0;
+      transform: perspective(1400px) translate3d(calc(var(--dir, 1) * 6%), 0, -180px)
+        rotateY(calc(var(--dir, 1) * -12deg));
+    }
+  }
+
+  @keyframes hero-out {
+    to {
+      opacity: 0;
+      transform: perspective(1400px) translate3d(calc(var(--dir, 1) * -6%), 0, -180px)
+        rotateY(calc(var(--dir, 1) * 12deg));
+    }
+  }
+
+  /* Team ring: rests on each of the 5 cards, then turns to the next. */
+  @keyframes carousel {
+    0%,
+    16% {
+      transform: rotateY(0deg);
+    }
+    20%,
+    36% {
+      transform: rotateY(-72deg);
+    }
+    40%,
+    56% {
+      transform: rotateY(-144deg);
+    }
+    60%,
+    76% {
+      transform: rotateY(-216deg);
+    }
+    80%,
+    96% {
+      transform: rotateY(-288deg);
+    }
+    100% {
+      transform: rotateY(-360deg);
+    }
+  }
 
   /* Slider dot filling up while a banner is shown. */
   @keyframes progress {
@@ -131,6 +178,11 @@
       transform: rotateX(-10deg) rotateY(58deg);
     }
   }
+}
+
+/* Freeze every animation inside an area that is off screen (saves CPU/GPU). */
+[data-paused] * {
+  animation-play-state: paused !important;
 }
 
 body {

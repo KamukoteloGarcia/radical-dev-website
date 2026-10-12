@@ -7,10 +7,19 @@ const donutStyle = {
   mask: "radial-gradient(circle, transparent 52%, #000 54%)",
 };
 
-// Floating dashboard card (top right of the scene).
-export function StatsPanel({ labels }: { labels: Content["stats"] }) {
+type StatsPanelProps = {
+  labels: Content["stats"];
+  position?: { left: number; top: number };
+};
+
+// Floating dashboard card (top right of the phone scene by default).
+export function StatsPanel({ labels, position = { left: 500, top: 14 } }: StatsPanelProps) {
   return (
-    <div aria-hidden="true" className="absolute left-[500px] top-[14px] w-[172px] transform-3d motion-safe:animate-float [animation-delay:-1s]">
+    <div
+      aria-hidden="true"
+      className="absolute w-[172px] transform-3d motion-safe:animate-float [animation-delay:-1s]"
+      style={position}
+    >
       <div
         className="rounded-[14px] bg-[#16161b]/90 p-3 text-white ring-1 ring-white/10 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.7),0_0_30px_-8px_var(--glow)]"
         style={{ transform: "rotateY(-28deg) rotateX(10deg) translateZ(-30px)" }}

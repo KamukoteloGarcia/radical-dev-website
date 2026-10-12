@@ -24,7 +24,7 @@ export function Pedestal() {
           style={{ transform: `translate(-50%, -100%) translateZ(${depth / 2}px) rotateX(-90deg)` }}
         >
           <span className="absolute inset-x-3 bottom-0 h-full bg-[linear-gradient(to_top,var(--glow),transparent)] [clip-path:polygon(25%_100%,75%_100%,100%_0,0_0)]" />
-          <UsersIcon className="relative size-full p-3 text-red-bright drop-shadow-[0_0_10px_var(--red)] motion-safe:animate-glow" />
+          <UsersIcon className="relative size-full p-3 text-red-bright motion-safe:animate-glow" />
         </div>
       </div>
     </div>

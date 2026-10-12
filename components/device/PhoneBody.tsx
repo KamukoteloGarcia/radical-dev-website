@@ -1,6 +1,6 @@
 import { phone } from "./dimensions";
 
-const layers = 16;
+const layers = 10;
 
 // Phone thickness: stacked rounded layers plus 4 flat side faces.
 export function PhoneBody() {
