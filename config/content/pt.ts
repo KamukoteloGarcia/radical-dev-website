@@ -14,10 +14,18 @@ export type HeroText = {
   secondary: Link;
 };
 
-export type SolutionIcon = "web" | "mobile" | "data" | "design" | "cloud" | "security";
+export type SectorId = "banking" | "energy" | "public" | "mining" | "other";
 export type ReasonIcon = "shield" | "chart" | "globe";
 
-type Solution = { icon: SolutionIcon; title: string; text: string };
+type Sector = {
+  id: SectorId;
+  tab: string;
+  title: string;
+  text: string;
+  points: string[];
+  stat: string;
+  statLabel: string;
+};
 type Reason = { icon: ReasonIcon; title: string; text: string };
 type Quote = { text: string; author: string; role: string };
 
@@ -106,17 +114,78 @@ export const pt = {
   stats: { title: "Desempenho", deliveries: "Entregas", clients: "Clientes" },
 
   solutions: {
-    title: "Soluções que movem o seu negócio",
-    subtitle: "Do primeiro esboço à operação em escala, cobrimos todo o ciclo digital com uma equipa especializada.",
+    title: "Soluções Corporativas Institucionais",
+    subtitle:
+      "Arquitectura de software desenhada para a complexidade e rigor das instituições públicas e organizações do terceiro sector.",
+    featured: {
+      title: "Institucional",
+      text: "Parceiro estratégico para a Administração Pública, garantindo a modernização administrativa e a eficiência governativa através de sistemas de alta criticidade.",
+      features: ["Websites Institucionais", "Apps Governamentais", "Sistemas e-Gov", "Cibersegurança"],
+      cta: { label: "Pedir Orçamento", href: "#contactos" },
+    },
+    cards: [
+      {
+        title: "Instituições Governamentais",
+        text: "Foco na modernização governamental e soberania digital, com plataformas seguras e interoperáveis.",
+      },
+      {
+        title: "Instituições Não Governamentais",
+        text: "Tecnologia para impacto social e ferramentas avançadas de gestão de projectos e doadores.",
+      },
+    ],
     more: "Saber mais",
+  },
+
+  sectors: {
+    title: "Especialização Sectorial",
+    explore: "Explorar",
     items: [
-      { icon: "web", title: "Desenvolvimento web", text: "Portais, lojas online e sistemas de gestão rápidos, seguros e escaláveis." },
-      { icon: "mobile", title: "Apps móveis", text: "Aplicações iOS e Android pensadas para o utilizador angolano, online e offline." },
-      { icon: "data", title: "Dados & IA", text: "Business Intelligence, automação e inteligência artificial ao serviço das decisões." },
-      { icon: "design", title: "Design UX/UI", text: "Interfaces intuitivas e acessíveis, da pesquisa com utilizadores ao protótipo final." },
-      { icon: "cloud", title: "Cloud & DevOps", text: "Infraestrutura na nuvem, entrega contínua e alta disponibilidade 24/7." },
-      { icon: "security", title: "Cibersegurança", text: "Proteção de dados, auditorias e conformidade com a regulamentação nacional." },
-    ] as Solution[],
+      {
+        id: "banking",
+        tab: "Banca e Finanças",
+        title: "O seu site ou loja online, do zero ao ar",
+        text: "Desenhamos e desenvolvemos o seu site pessoal, portfólio ou loja online, com uma apresentação profissional e fácil de gerir — sem que precise de escrever uma linha de código.",
+        points: ["Conversa inicial para entender a sua ideia", "Design e desenvolvimento à sua medida", "Site publicado e pronto a partilhar"],
+        stat: "+40",
+        statLabel: "Instituições confiaram em nós",
+      },
+      {
+        id: "energy",
+        tab: "Energia e Petróleo",
+        title: "Operações industriais ligadas e seguras",
+        text: "Sistemas de monitorização, manutenção e segurança para operações onshore e offshore, com dados em tempo real para decidir mais depressa.",
+        points: ["Monitorização de activos em tempo real", "Gestão de manutenção preventiva", "Relatórios de segurança e conformidade"],
+        stat: "+15",
+        statLabel: "Operações digitalizadas",
+      },
+      {
+        id: "public",
+        tab: "Administração Pública",
+        title: "Serviços públicos digitais para o cidadão",
+        text: "Portais, balcões únicos e sistemas de gestão documental que aproximam o Estado do cidadão, com transparência e segurança.",
+        points: ["Balcão único digital", "Gestão documental e processos", "Integração entre ministérios"],
+        stat: "+25",
+        statLabel: "Entidades públicas servidas",
+      },
+      {
+        id: "mining",
+        tab: "Recursos Minerais",
+        title: "Gestão mineira com dados de campo",
+        text: "Aplicações para equipas no terreno, rastreabilidade da produção e relatórios ambientais, mesmo em zonas com pouca rede.",
+        points: ["Recolha de dados no terreno, offline", "Rastreabilidade da produção", "Relatórios ambientais e de licenciamento"],
+        stat: "+10",
+        statLabel: "Projectos mineiros apoiados",
+      },
+      {
+        id: "other",
+        tab: "Outros",
+        title: "Soluções à medida para o seu sector",
+        text: "Saúde, educação, logística, comércio e muito mais: analisamos o seu desafio e construímos a solução certa com a nossa equipa.",
+        points: ["Diagnóstico gratuito do projecto", "Equipa dedicada do início ao fim", "Suporte e evolução contínua"],
+        stat: "+120",
+        statLabel: "Projectos entregues",
+      },
+    ] as Sector[],
   },
 
   whyUs: {

@@ -28,3 +28,11 @@ Free-license photos (Unsplash License / Pexels License).
 - `quotes/3.webp` — https://www.pexels.com/photo/18809829/
 - `quotes/4.webp` — https://www.pexels.com/photo/32064778/
 - `quotes/5.webp` — https://www.pexels.com/photo/3727464/
+- `solutions/institutional.webp` — https://www.pexels.com/photo/8730895/
+- `solutions/government.webp` — https://www.pexels.com/photo/8349230/
+- `solutions/ngo.webp` — https://www.pexels.com/photo/12911301/
+- `sectors/banking.webp` — https://www.pexels.com/photo/6801647/
+- `sectors/energy.webp` — https://www.pexels.com/photo/9242289/
+- `sectors/public.webp` — https://www.pexels.com/photo/6694529/
+- `sectors/mining.webp` — https://www.pexels.com/photo/11174202/
+- `sectors/other.webp` — https://www.pexels.com/photo/1181605/

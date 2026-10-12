@@ -1,3 +1,5 @@
+import type { SectorId } from "@/config/content/pt";
+
 // Real photos (WebP, pre-sized) in /public/photos. Credits: /public/photos/CREDITS.md.
 // Each list lines up with the captions in content `screens`.
 export const screenPhotos = {
@@ -34,6 +36,20 @@ export const screenPhotos = {
 export type ScreenId = keyof typeof screenPhotos;
 
 export const heroPerson = "/photos/web/person.webp";
+
+// Solutions bento: big card + the two side cards (same order as content `solutions.cards`).
+export const solutionPhotos = {
+  featured: "/photos/solutions/institutional.webp",
+  cards: ["/photos/solutions/government.webp", "/photos/solutions/ngo.webp"],
+};
+
+export const sectorPhotos: Record<SectorId, string> = {
+  banking: "/photos/sectors/banking.webp",
+  energy: "/photos/sectors/energy.webp",
+  public: "/photos/sectors/public.webp",
+  mining: "/photos/sectors/mining.webp",
+  other: "/photos/sectors/other.webp",
+};
 
 // Avatars for the quotes, in the same order as content `quotes.items`.
 export const quotePhotos = [1, 2, 3, 4, 5].map((n) => `/photos/quotes/${n}.webp`);

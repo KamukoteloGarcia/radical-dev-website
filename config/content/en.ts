@@ -85,16 +85,77 @@ export const en: Content = {
   stats: { title: "Performance", deliveries: "Deliveries", clients: "Clients" },
 
   solutions: {
-    title: "Solutions that move your business",
-    subtitle: "From the first sketch to operating at scale, we cover the whole digital cycle with a specialised team.",
+    title: "Institutional Corporate Solutions",
+    subtitle:
+      "Software architecture designed for the complexity and rigour of public institutions and third-sector organisations.",
+    featured: {
+      title: "Institutional",
+      text: "Strategic partner for Public Administration, ensuring administrative modernisation and government efficiency through mission-critical systems.",
+      features: ["Institutional Websites", "Government Apps", "e-Gov Systems", "Cybersecurity"],
+      cta: { label: "Request a Quote", href: "#contactos" },
+    },
+    cards: [
+      {
+        title: "Government Institutions",
+        text: "Focused on government modernisation and digital sovereignty, with secure, interoperable platforms.",
+      },
+      {
+        title: "Non-Governmental Institutions",
+        text: "Technology for social impact and advanced tools to manage projects and donors.",
+      },
+    ],
     more: "Learn more",
+  },
+
+  sectors: {
+    title: "Sector Expertise",
+    explore: "Explore",
     items: [
-      { icon: "web", title: "Web development", text: "Fast, secure and scalable portals, online stores and management systems." },
-      { icon: "mobile", title: "Mobile apps", text: "iOS and Android apps designed for Angolan users, online and offline." },
-      { icon: "data", title: "Data & AI", text: "Business Intelligence, automation and artificial intelligence for better decisions." },
-      { icon: "design", title: "UX/UI design", text: "Intuitive, accessible interfaces, from user research to the final prototype." },
-      { icon: "cloud", title: "Cloud & DevOps", text: "Cloud infrastructure, continuous delivery and 24/7 high availability." },
-      { icon: "security", title: "Cybersecurity", text: "Data protection, audits and compliance with national regulations." },
+      {
+        id: "banking",
+        tab: "Banking & Finance",
+        title: "Your website or online store, from zero to live",
+        text: "We design and build your personal site, portfolio or online store, with a professional look that is easy to manage — without you writing a single line of code.",
+        points: ["Kick-off chat to understand your idea", "Tailor-made design and development", "Site published and ready to share"],
+        stat: "+40",
+        statLabel: "Institutions trusted us",
+      },
+      {
+        id: "energy",
+        tab: "Energy & Oil",
+        title: "Connected, safe industrial operations",
+        text: "Monitoring, maintenance and safety systems for onshore and offshore operations, with real-time data to decide faster.",
+        points: ["Real-time asset monitoring", "Preventive maintenance management", "Safety and compliance reports"],
+        stat: "+15",
+        statLabel: "Operations digitised",
+      },
+      {
+        id: "public",
+        tab: "Public Administration",
+        title: "Digital public services for citizens",
+        text: "Portals, one-stop shops and document management systems that bring the State closer to citizens, with transparency and security.",
+        points: ["Digital one-stop shop", "Document and process management", "Integration across ministries"],
+        stat: "+25",
+        statLabel: "Public bodies served",
+      },
+      {
+        id: "mining",
+        tab: "Mineral Resources",
+        title: "Mining management with field data",
+        text: "Apps for field teams, production traceability and environmental reporting, even in areas with poor coverage.",
+        points: ["Offline field data collection", "Production traceability", "Environmental and licensing reports"],
+        stat: "+10",
+        statLabel: "Mining projects supported",
+      },
+      {
+        id: "other",
+        tab: "Others",
+        title: "Tailor-made solutions for your sector",
+        text: "Health, education, logistics, retail and more: we analyse your challenge and build the right solution with our team.",
+        points: ["Free project assessment", "Dedicated team from start to finish", "Ongoing support and evolution"],
+        stat: "+120",
+        statLabel: "Projects delivered",
+      },
     ],
   },
 

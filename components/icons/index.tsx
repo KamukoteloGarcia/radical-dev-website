@@ -268,6 +268,58 @@ export function LockIcon(props: IconProps) {
   );
 }
 
+export function BuildingIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M3 9.5 12 4l9 5.5M4.5 20h15M3 20h18M6 10.5V17M10 10.5V17M14 10.5V17M18 10.5V17" />
+    </Icon>
+  );
+}
+
+export function HandHeartIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M3 14h3l3.5 2H14a1.5 1.5 0 0 0 0-3h-3.5M6 20H3M6 14v6l8 1 7-4a1.5 1.5 0 0 0-1.7-2.4L15 16" />
+      <path d="M15.5 4.6a2 2 0 0 0-3 0 2 2 0 0 0-3 2.6L12.5 10l3-2.8a2 2 0 0 0 0-2.6Z" />
+    </Icon>
+  );
+}
+
+export function BoltIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M13 2 4 14h7l-1 8 9-12h-7Z" />
+    </Icon>
+  );
+}
+
+export function GemIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M6 3h12l3 6-9 12L3 9Z" />
+      <path d="M3 9h18M9 3l3 6 3-6M12 9v12" />
+    </Icon>
+  );
+}
+
+export function CheckCircleIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8 12.5 2.6 2.5L16 9.5" />
+    </Icon>
+  );
+}
+
+export function UsersOutlineIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.6a3.5 3.5 0 0 1 0 6.8M17.5 14.2c2.4.6 4 2.8 4 5.8" />
+    </Icon>
+  );
+}
+
 export function PauseIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
