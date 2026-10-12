@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
-import { innovationClips } from "@/config/innovation";
+import type { VideoClip, VideoControlsText } from "@/config/video";
 import { ChapterNav } from "./ChapterNav";
 import { VideoDeck } from "./VideoDeck";
 
@@ -13,17 +13,20 @@ function subscribeReducedMotion(onChange: () => void) {
   return () => media.removeEventListener("change", onChange);
 }
 
-type InnovationShowcaseProps = {
+type VideoShowcaseProps = {
   /** Title, text and button (rendered on the server). */
   children: ReactNode;
+  clips: readonly VideoClip[];
+  /** Length of every clip, for the chapter progress bar. */
+  clipSeconds: number;
   labels: string[];
-  controls: { chapters: string; goTo: string; pause: string; play: string };
+  controls: VideoControlsText;
 };
 
 // Owns the playback state shared by the chapter bar (left) and the 3D video deck (right).
 // Videos stay still for visitors who prefer reduced motion (they can still press play)
 // and pause while the banner is off screen.
-export function InnovationShowcase({ children, labels, controls }: InnovationShowcaseProps) {
+export function VideoShowcase({ children, clips, clipSeconds, labels, controls }: VideoShowcaseProps) {
   const prefersReducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
     () => window.matchMedia(reducedMotionQuery).matches,
@@ -50,6 +53,7 @@ export function InnovationShowcase({ children, labels, controls }: InnovationSho
       <div>
         {children}
         <ChapterNav
+          clipSeconds={clipSeconds}
           labels={labels}
           active={active}
           playing={playing}
@@ -61,11 +65,11 @@ export function InnovationShowcase({ children, labels, controls }: InnovationSho
       </div>
 
       <VideoDeck
-        clips={innovationClips}
+        clips={clips}
         labels={labels}
         active={active}
         playing={playing}
-        onEnded={() => setActive((current) => (current + 1) % innovationClips.length)}
+        onEnded={() => setActive((current) => (current + 1) % clips.length)}
       />
     </div>
   );

@@ -12,7 +12,7 @@ export async function InnovationLab() {
 
   return (
     <section id="laboratorio" data-theme="light" aria-labelledby="laboratorio-titulo" className="bg-bg py-16 text-fg lg:py-24">
-      <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-[minmax(0,0.9fr)_1fr] lg:gap-[8%] lg:px-[60px]">
+      <div className="container-site grid items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_1fr] lg:gap-[8%]">
         <div className="relative aspect-square overflow-hidden rounded-[24px]">
           <Image src={innovationPhotos.lab} alt={lab.imageAlt} fill unoptimized className="object-cover" />
         </div>

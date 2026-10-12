@@ -42,3 +42,8 @@ Free-license photos (Unsplash License / Pexels License).
 - `projects/community.webp` — https://www.pexels.com/photo/group-of-people-standing-in-line-7551724/
 - `projects/fintech.webp` — https://www.pexels.com/photo/black-smartphone-on-the-table-10736997/
 - `projects/corporate.webp` — https://www.pexels.com/photo/femme-au-bureau-20209020/
+
+- `careers/featured.webp` — https://www.pexels.com/photo/person-using-silver-and-black-laptop-computer-5496464/
+- `careers/hr.webp` — https://www.pexels.com/photo/woman-sitting-in-front-of-a-computer-while-talking-on-the-phone-3894377/
+- `careers/tech.webp` — https://www.pexels.com/photo/man-writing-a-code-on-a-computer-and-laptop-9553905/
+- `careers/marketing.webp` — https://www.pexels.com/photo/woman-sits-in-front-of-black-laptop-computer-1181649/

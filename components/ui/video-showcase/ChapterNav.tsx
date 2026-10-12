@@ -1,10 +1,10 @@
 "use client";
 
 import { PauseIcon, PlayIcon } from "@/components/icons";
-import { clipSeconds } from "@/config/innovation";
 import { cn } from "@/lib/cn";
 
 type ChapterNavProps = {
+  clipSeconds: number;
   labels: string[];
   active: number;
   playing: boolean;
@@ -15,7 +15,7 @@ type ChapterNavProps = {
 };
 
 // "01 Prototipagem · 02 Produto · 03 Cloud" with a progress bar per scene, plus pause/play.
-export function ChapterNav({ labels, active, playing, isPaused, onSelect, onTogglePause, text }: ChapterNavProps) {
+export function ChapterNav({ clipSeconds, labels, active, playing, isPaused, onSelect, onTogglePause, text }: ChapterNavProps) {
   return (
     <div className="mt-10 flex items-end gap-4 sm:gap-6">
       <ol aria-label={text.chapters} className="grid flex-1 grid-cols-3 gap-3 sm:gap-5">

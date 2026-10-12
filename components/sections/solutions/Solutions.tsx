@@ -13,7 +13,7 @@ export async function Solutions() {
 
   return (
     <section id="solucoes" data-theme="light" aria-labelledby="solucoes-titulo" className="bg-bg pb-16 pt-20 text-fg lg:pb-20 lg:pt-28">
-      <div className="mx-auto max-w-[1180px] px-5 sm:px-8 lg:px-10">
+      <div className="container-site">
         <SectionHeading id="solucoes-titulo" title={solutions.title} subtitle={solutions.subtitle} compact />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-[1.5fr_1fr] lg:grid-rows-2">

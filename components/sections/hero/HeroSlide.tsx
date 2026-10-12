@@ -16,7 +16,7 @@ export function HeroSlide({ text, heading, tone, children }: HeroSlideProps) {
   return (
     <div data-theme={tone} className="relative isolate h-full bg-bg text-fg">
       <HeroBackground />
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-8 px-5 pb-6 pt-12 sm:px-8 lg:min-h-[calc(100svh-126px)] lg:flex-row lg:justify-between lg:gap-6 lg:px-10 lg:pb-24 lg:pt-10">
+      <div className="container-site flex flex-col items-center gap-8 pb-6 pt-12 lg:min-h-[calc(100svh-126px)] lg:flex-row lg:justify-between lg:gap-6 lg:pb-24 lg:pt-10">
         <HeroContent text={text} heading={heading} />
         {children}
       </div>

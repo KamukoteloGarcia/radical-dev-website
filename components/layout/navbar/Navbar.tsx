@@ -8,7 +8,7 @@ export async function Navbar() {
 
   return (
     <div className="relative border-b border-line bg-nav">
-      <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-10">
+      <div className="container-site flex h-[76px] items-center justify-between">
         <Logo label={a11y.home} />
         <nav aria-label={a11y.main} className="hidden lg:block">
           <NavLinks links={links} />

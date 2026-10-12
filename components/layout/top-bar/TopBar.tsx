@@ -8,7 +8,7 @@ export async function TopBar() {
 
   return (
     <div className="border-b border-line bg-topbar">
-      <div className="mx-auto flex h-[50px] max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
+      <div className="container-site flex h-[50px] items-center justify-between gap-4">
         <SegmentTabs items={t.segments} label={t.a11y.segments} />
         <div className="flex shrink-0 items-center gap-4">
           <LanguageSwitcher current={language} label={t.a11y.language} />

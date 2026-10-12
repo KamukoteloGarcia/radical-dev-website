@@ -11,7 +11,7 @@ export async function FeaturedProjects() {
 
   return (
     <section id="projectos" data-theme="light" aria-labelledby="projectos-titulo" className="bg-bg pb-24 pt-10 text-fg lg:pb-28">
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-[72px]">
+      <div className="container-site">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2

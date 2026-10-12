@@ -1,3 +1,4 @@
+import { careersEn } from "./careers/en";
 import type { Content } from "./pt";
 
 export const en: Content = {
@@ -15,7 +16,7 @@ export const en: Content = {
     { label: "Services", href: "/#solucoes" },
     { label: "Innovation", href: "/inovacao" },
     { label: "Ecosystem", href: "/#ecossistema" },
-    { label: "Careers", href: "/#carreiras" },
+    { label: "Careers", href: "/carreiras" },
     { label: "Contact", href: "#contactos" },
     { label: "About Us", href: "/#sobre" },
   ],
@@ -59,7 +60,7 @@ export const en: Content = {
       description:
         "Engineers, designers and consultants dedicated to making your project happen, with rigour and passion.",
       primary: { label: "Meet the team", href: "/#sobre" },
-      secondary: { label: "Work with us", href: "/#carreiras" },
+      secondary: { label: "Work with us", href: "/carreiras" },
     },
   },
 
@@ -257,6 +258,8 @@ export const en: Content = {
     },
   },
 
+  careers: careersEn,
+
   footer: {
     cta: {
       eyebrow: "Ready to start?",
@@ -283,8 +286,8 @@ export const en: Content = {
           { label: "About us", href: "/#sobre" },
           { label: "Innovation", href: "/inovacao" },
           { label: "Ecosystem", href: "/#ecossistema" },
-          { label: "Careers", href: "/#carreiras" },
-          { label: "Radical Academy", href: "/#carreiras" },
+          { label: "Careers", href: "/carreiras" },
+          { label: "Radical Academy", href: "/carreiras" },
         ],
       },
     ],

@@ -6,7 +6,7 @@ import { FooterCta } from "./FooterCta";
 import { FooterLinks } from "./FooterLinks";
 import { FooterWordmark } from "./FooterWordmark";
 
-const container = "mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-10";
+const container = "container-site";
 
 export async function Footer() {
   const { footer, a11y } = await getContent();

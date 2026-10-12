@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { InnovationClip } from "@/config/innovation";
+import type { VideoClip } from "@/config/video";
 import { cn } from "@/lib/cn";
 
 // Where each card sits in the deck: 0 = front (playing), then further back and up.
@@ -12,7 +12,7 @@ const slots = [
 ];
 
 type VideoDeckProps = {
-  clips: readonly InnovationClip[];
+  clips: readonly VideoClip[];
   labels: string[];
   active: number;
   playing: boolean;

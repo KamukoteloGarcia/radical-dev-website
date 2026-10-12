@@ -1,6 +1,7 @@
 import type { BannerId } from "@/config/banners";
 import type { HeroSlideId } from "@/config/hero";
 import type { InnovationClipId } from "@/config/innovation";
+import { careersPt } from "./careers/pt";
 import type { ProjectId, ScreenId } from "@/config/photos";
 
 type Slide = { id: BannerId; title: string; text: string };
@@ -49,7 +50,7 @@ export const pt = {
     { label: "Serviços", href: "/#solucoes" },
     { label: "Inovação", href: "/inovacao" },
     { label: "Ecossistema", href: "/#ecossistema" },
-    { label: "Carreiras", href: "/#carreiras" },
+    { label: "Carreiras", href: "/carreiras" },
     { label: "Contactos", href: "#contactos" },
     { label: "Sobre Nós", href: "/#sobre" },
   ],
@@ -93,7 +94,7 @@ export const pt = {
       description:
         "Engenheiros, designers e consultores dedicados a fazer o seu projeto acontecer, com rigor e paixão.",
       primary: { label: "Conhecer a equipa", href: "/#sobre" },
-      secondary: { label: "Trabalhe connosco", href: "/#carreiras" },
+      secondary: { label: "Trabalhe connosco", href: "/carreiras" },
     },
   } satisfies Record<HeroSlideId, HeroText>,
 
@@ -291,6 +292,8 @@ export const pt = {
     },
   },
 
+  careers: careersPt,
+
   footer: {
     cta: {
       eyebrow: "Pronto para começar?",
@@ -317,8 +320,8 @@ export const pt = {
           { label: "Sobre nós", href: "/#sobre" },
           { label: "Inovação", href: "/inovacao" },
           { label: "Ecossistema", href: "/#ecossistema" },
-          { label: "Carreiras", href: "/#carreiras" },
-          { label: "Academia Radical", href: "/#carreiras" },
+          { label: "Carreiras", href: "/carreiras" },
+          { label: "Academia Radical", href: "/carreiras" },
         ],
       },
     ],
