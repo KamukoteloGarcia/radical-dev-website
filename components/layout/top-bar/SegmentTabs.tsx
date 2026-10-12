@@ -1,31 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { segments } from "@/config/navigation";
 import { cn } from "@/lib/cn";
 
-export function SegmentTabs() {
-  const [active, setActive] = useState(segments[0]);
+type SegmentTabsProps = { items: string[]; label: string };
+
+export function SegmentTabs({ items, label }: SegmentTabsProps) {
+  const [active, setActive] = useState(0);
 
   return (
     <nav
-      aria-label="Segmentos"
-      className="flex min-w-0 items-center gap-6 overflow-x-auto [scrollbar-width:none] lg:gap-[43px]"
+      aria-label={label}
+      className="flex min-w-0 items-center gap-6 overflow-x-auto [scrollbar-width:none] lg:gap-8"
     >
-      {segments.map((segment) => (
+      {items.map((item, i) => (
         <button
-          key={segment}
+          key={item}
           type="button"
-          aria-pressed={segment === active}
-          onClick={() => setActive(segment)}
+          aria-pressed={i === active}
+          onClick={() => setActive(i)}
           className={cn(
-            "whitespace-nowrap py-2 text-[15px] transition-colors sm:text-[19px]",
-            segment === active
-              ? "font-bold text-fg underline decoration-[2.5px] underline-offset-[7px]"
-              : "font-medium text-fg/65 hover:text-fg",
+            "relative whitespace-nowrap py-3 text-[15px] transition-colors",
+            "after:absolute after:inset-x-0 after:bottom-[7px] after:h-px after:origin-left after:bg-red after:transition-transform after:duration-300",
+            i === active ? "text-red after:scale-x-100" : "text-muted after:scale-x-0 hover:text-fg",
           )}
         >
-          {segment}
+          {item}
         </button>
       ))}
     </nav>

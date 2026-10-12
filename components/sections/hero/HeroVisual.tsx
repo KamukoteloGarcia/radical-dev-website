@@ -1,32 +1,16 @@
-import { AppScreen } from "@/components/device/app-screen/AppScreen";
-import { PhoneFrame } from "@/components/device/PhoneFrame";
-import { CodeIcon, TrendUpIcon, UsersIcon } from "@/components/icons";
-import { IconTile } from "@/components/ui/IconTile";
-import { OrbitRings } from "./OrbitRings";
+import type { ReactNode } from "react";
+import { Stage } from "@/components/scene/Stage";
 
-// Positions are relative to the fixed 560×580 canvas.
-const tiles = [
-  { id: "code", Icon: CodeIcon, style: { left: 0, top: 85, animationDelay: "0s" } },
-  { id: "trend", Icon: TrendUpIcon, style: { left: 498, top: 22, animationDelay: "-2s" } },
-  { id: "users", Icon: UsersIcon, style: { left: 9, top: 401, animationDelay: "-4s" } },
-];
-
-export function HeroVisual() {
+// Scenes are drawn on a fixed 680×620 canvas and scaled per breakpoint.
+export function HeroVisual({ label, children }: { label: string; children: ReactNode }) {
   return (
-    // Wrapper reserves the scaled size; the canvas scales per breakpoint.
-    <div className="relative h-[348px] w-full shrink-0 sm:h-[522px] lg:h-[406px] lg:w-[392px] xl:h-[493px] xl:w-[476px] 2xl:h-[580px] 2xl:w-[560px]">
-      <div className="absolute left-1/2 top-0 h-[580px] w-[560px] origin-top -translate-x-1/2 scale-60 sm:scale-90 lg:scale-70 xl:scale-85 2xl:scale-100">
-        <OrbitRings />
-        <div className="absolute left-[167px] top-[40px]">
-          <PhoneFrame>
-            <AppScreen />
-          </PhoneFrame>
-        </div>
-        {tiles.map(({ id, Icon, style }) => (
-          <IconTile key={id} style={style}>
-            <Icon className="size-[30px]" strokeWidth={2.6} />
-          </IconTile>
-        ))}
+    <div
+      role="group"
+      aria-label={label}
+      className="relative h-[298px] w-full shrink-0 min-[400px]:h-[335px] sm:h-[465px] lg:h-[446px] lg:w-[490px] xl:h-[589px] xl:w-[646px] 2xl:h-[620px] 2xl:w-[680px]"
+    >
+      <div className="absolute left-1/2 top-0 h-[620px] w-[680px] origin-top -translate-x-1/2 scale-48 min-[400px]:scale-54 sm:scale-75 lg:scale-72 xl:scale-95 2xl:scale-100">
+        <Stage>{children}</Stage>
       </div>
     </div>
   );

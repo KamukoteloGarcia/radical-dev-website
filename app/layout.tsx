@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Nunito, Raleway } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { site } from "@/config/site";
+import { getLanguage, getTheme } from "@/lib/preferences";
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-// Used by the placeholder logo wordmark.
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  weight: ["600", "800"],
 });
 
 export const metadata: Metadata = {
@@ -44,14 +38,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const [language, theme] = await Promise.all([getLanguage(), getTheme()]);
+
   return (
     <html
-      lang="pt"
-      data-theme="light"
-      className={`${raleway.variable} ${inter.variable} ${nunito.variable} h-full antialiased`}
+      lang={language}
+      data-theme={theme}
+      className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }

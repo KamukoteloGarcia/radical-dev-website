@@ -10,11 +10,11 @@ function siteUrl() {
 
 // Site-wide metadata used for SEO and link previews.
 export const site = {
-  name: "Radical Dev",
-  title: "Radical Dev | Tecnologia que transforma Angola",
-  tagline: "Tecnologia que transforma Angola",
+  name: "Radical dev",
+  title: "Radical dev | Revolucionando o desenvolvimento com propósito",
+  tagline: "Revolucionando o desenvolvimento com propósito.",
   description:
-    "Soluções digitais personalizadas para empresas, governo e ONGs, impulsionando o progresso nacional através da inovação sustentável.",
+    "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
   url: siteUrl(),
   locale: "pt_AO",
 };

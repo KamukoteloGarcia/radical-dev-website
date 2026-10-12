@@ -1,24 +1,25 @@
-export function AppHeader() {
+import { LogoMark } from "@/components/brand/LogoMark";
+import { BellIcon, SearchIcon } from "@/components/icons";
+
+export function AppHeader({ welcome }: { welcome: string }) {
   return (
-    <div className="bg-brand-red px-[8px] pb-[6px] text-white">
-      <div className="flex h-[12px] flex-col justify-center gap-[1.5px]">
-        {[0, 1, 2].map((line) => (
-          <span key={line} className="h-[1px] w-[7px] bg-white" />
-        ))}
+    <div className="flex h-[44px] shrink-0 items-center justify-between px-4">
+      <div className="flex items-center gap-2">
+        <LogoMark className="size-7 text-white" />
+        <div className="leading-tight">
+          <p className="text-[9px] text-white/50">{welcome}</p>
+          <p className="font-display text-[13px] font-semibold">
+            Radical <span className="text-red">dev</span>
+          </p>
+        </div>
       </div>
-      <div className="mt-[2px] flex items-center justify-center gap-[5px] leading-none">
-        <span className="font-display text-[11px] font-extrabold">R</span>
-        <span className="text-[4.5px] font-bold leading-[1.1] tracking-wide">
-          RADICAL
-          <br />
-          DIGITAL
+      <div className="flex gap-1.5">
+        <span className="grid size-7 place-items-center rounded-full bg-white/[0.08]">
+          <SearchIcon className="size-3.5" />
         </span>
-        <span className="h-[14px] w-px bg-white/70" />
-        <span>
-          <span className="block text-[8px] font-bold">
-            app<span className="font-normal">.radical.dev</span>
-          </span>
-          <span className="block text-[4.5px]">Plataforma de Serviços</span>
+        <span className="relative grid size-7 place-items-center rounded-full bg-white/[0.08]">
+          <BellIcon className="size-3.5" />
+          <span className="absolute right-1.5 top-1.5 size-1.5 rounded-full bg-red" />
         </span>
       </div>
     </div>
