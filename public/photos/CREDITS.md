@@ -23,3 +23,8 @@ Free-license photos (Unsplash License / Pexels License).
 - `team/data.webp` — https://www.pexels.com/photo/33844626/
 - `team/cloud.webp` — https://unsplash.com/photos/1573497161161-c3e73707e25c
 - `team/projects.webp` — https://www.pexels.com/photo/6897203/
+- `quotes/1.webp` — https://www.pexels.com/photo/29852895/
+- `quotes/2.webp` — https://www.pexels.com/photo/13529140/
+- `quotes/3.webp` — https://www.pexels.com/photo/18809829/
+- `quotes/4.webp` — https://www.pexels.com/photo/32064778/
+- `quotes/5.webp` — https://www.pexels.com/photo/3727464/

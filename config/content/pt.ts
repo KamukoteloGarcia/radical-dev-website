@@ -14,6 +14,13 @@ export type HeroText = {
   secondary: Link;
 };
 
+export type SolutionIcon = "web" | "mobile" | "data" | "design" | "cloud" | "security";
+export type ReasonIcon = "shield" | "chart" | "globe";
+
+type Solution = { icon: SolutionIcon; title: string; text: string };
+type Reason = { icon: ReasonIcon; title: string; text: string };
+type Quote = { text: string; author: string; role: string };
+
 export const pt = {
   segments: ["Institucional", "Privadas", "Particulares", "ONGs"],
 
@@ -97,6 +104,110 @@ export const pt = {
   },
 
   stats: { title: "Desempenho", deliveries: "Entregas", clients: "Clientes" },
+
+  solutions: {
+    title: "Soluções que movem o seu negócio",
+    subtitle: "Do primeiro esboço à operação em escala, cobrimos todo o ciclo digital com uma equipa especializada.",
+    more: "Saber mais",
+    items: [
+      { icon: "web", title: "Desenvolvimento web", text: "Portais, lojas online e sistemas de gestão rápidos, seguros e escaláveis." },
+      { icon: "mobile", title: "Apps móveis", text: "Aplicações iOS e Android pensadas para o utilizador angolano, online e offline." },
+      { icon: "data", title: "Dados & IA", text: "Business Intelligence, automação e inteligência artificial ao serviço das decisões." },
+      { icon: "design", title: "Design UX/UI", text: "Interfaces intuitivas e acessíveis, da pesquisa com utilizadores ao protótipo final." },
+      { icon: "cloud", title: "Cloud & DevOps", text: "Infraestrutura na nuvem, entrega contínua e alta disponibilidade 24/7." },
+      { icon: "security", title: "Cibersegurança", text: "Proteção de dados, auditorias e conformidade com a regulamentação nacional." },
+    ] as Solution[],
+  },
+
+  whyUs: {
+    title: "Por que as instituições escolhem a Radical dev?",
+    subtitle: "Mais do que tecnologia — somos um parceiro estratégico que entende Angola, os seus desafios e as suas ambições.",
+    reasons: [
+      { icon: "shield", title: "Soberania Digital", text: "Protecção robusta de dados críticos com infraestrutura nacional soberana." },
+      { icon: "chart", title: "Eficiência Total", text: "Digitalização de processos complexos para acelerar serviços ao cidadão." },
+      { icon: "globe", title: "Modernização e-Gov", text: "Transformação digital completa para máxima transparência institucional." },
+    ] as Reason[],
+    partners: "Instituições que confiam em nós",
+    pausePartners: "Pausar carrossel de instituições",
+    playPartners: "Retomar carrossel de instituições",
+  },
+
+  quotes: {
+    label: "O que dizem sobre nós",
+    items: [
+      {
+        text: "Na Radical dev, não encaramos a conformidade regulamentar como um mero dever burocrático, mas como o verdadeiro motor de solidez que credibiliza as soluções digitais que desenvolvemos para impulsionar o futuro de Angola.",
+        author: "Conselho de Administração",
+        role: "Radical dev • Direcção de Governança & Risco",
+      },
+      {
+        text: "A plataforma desenvolvida pela Radical dev reduziu para metade o tempo de resposta aos nossos clientes. Uma parceria que transformou a nossa operação.",
+        author: "Director de Sistemas de Informação",
+        role: "Kwanza Bank • Transformação Digital",
+      },
+      {
+        text: "Encontrámos uma equipa que entende Angola, os nossos desafios e as nossas ambições. O resultado superou todas as expectativas.",
+        author: "Directora Executiva",
+        role: "Lumen Saúde • Direcção Geral",
+      },
+      {
+        text: "Com os dashboards da Radical dev passámos a decidir com dados em tempo real. Hoje a nossa logística é mais rápida e previsível.",
+        author: "Director de Operações",
+        role: "Atlas Logística • Operações",
+      },
+      {
+        text: "A Academia Radical formou a nossa equipa com rigor e proximidade. Ganhámos autonomia e uma verdadeira cultura digital.",
+        author: "Gestora de Recursos Humanos",
+        role: "Mukanda Educação • Talento & Cultura",
+      },
+    ] as Quote[],
+    goTo: "Ver citação",
+    previous: "Citação anterior",
+    next: "Citação seguinte",
+  },
+
+  footer: {
+    cta: {
+      eyebrow: "Pronto para começar?",
+      title: "Vamos construir o futuro juntos.",
+      text: "Conte-nos a sua ideia e transformamo-la numa solução digital de impacto.",
+      button: { label: "Iniciar um projeto", href: "#contactos" },
+    },
+    about:
+      "Tecnologia com propósito para empresas, governos e startups. Desenvolvemos soluções digitais que impulsionam Angola e o mundo.",
+    columns: [
+      {
+        title: "Soluções",
+        links: [
+          { label: "Desenvolvimento web", href: "#solucoes" },
+          { label: "Apps móveis", href: "#solucoes" },
+          { label: "Dados & IA", href: "#inovacao" },
+          { label: "Design UX/UI", href: "#solucoes" },
+          { label: "Cloud & DevOps", href: "#solucoes" },
+        ],
+      },
+      {
+        title: "Empresa",
+        links: [
+          { label: "Sobre nós", href: "#sobre" },
+          { label: "Inovação", href: "#inovacao" },
+          { label: "Ecossistema", href: "#ecossistema" },
+          { label: "Carreiras", href: "#carreiras" },
+          { label: "Academia Radical", href: "#carreiras" },
+        ],
+      },
+    ],
+    contactTitle: "Contactos",
+    hours: "Seg – Sex, 8h às 17h",
+    followUs: "Siga-nos",
+    rights: "Todos os direitos reservados.",
+    legal: [
+      { label: "Privacidade", href: "#privacidade" },
+      { label: "Termos de uso", href: "#termos" },
+      { label: "Cookies", href: "#cookies" },
+    ],
+    backToTop: "Voltar ao topo",
+  },
 
   a11y: {
     home: "Radical dev — página inicial",

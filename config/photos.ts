@@ -34,3 +34,6 @@ export const screenPhotos = {
 export type ScreenId = keyof typeof screenPhotos;
 
 export const heroPerson = "/photos/web/person.webp";
+
+// Avatars for the quotes, in the same order as content `quotes.items`.
+export const quotePhotos = [1, 2, 3, 4, 5].map((n) => `/photos/quotes/${n}.webp`);

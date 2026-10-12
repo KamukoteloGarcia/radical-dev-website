@@ -84,6 +84,110 @@ export const en: Content = {
 
   stats: { title: "Performance", deliveries: "Deliveries", clients: "Clients" },
 
+  solutions: {
+    title: "Solutions that move your business",
+    subtitle: "From the first sketch to operating at scale, we cover the whole digital cycle with a specialised team.",
+    more: "Learn more",
+    items: [
+      { icon: "web", title: "Web development", text: "Fast, secure and scalable portals, online stores and management systems." },
+      { icon: "mobile", title: "Mobile apps", text: "iOS and Android apps designed for Angolan users, online and offline." },
+      { icon: "data", title: "Data & AI", text: "Business Intelligence, automation and artificial intelligence for better decisions." },
+      { icon: "design", title: "UX/UI design", text: "Intuitive, accessible interfaces, from user research to the final prototype." },
+      { icon: "cloud", title: "Cloud & DevOps", text: "Cloud infrastructure, continuous delivery and 24/7 high availability." },
+      { icon: "security", title: "Cybersecurity", text: "Data protection, audits and compliance with national regulations." },
+    ],
+  },
+
+  whyUs: {
+    title: "Why do institutions choose Radical dev?",
+    subtitle: "More than technology — we are a strategic partner that understands Angola, its challenges and its ambitions.",
+    reasons: [
+      { icon: "shield", title: "Digital Sovereignty", text: "Robust protection of critical data on sovereign national infrastructure." },
+      { icon: "chart", title: "Total Efficiency", text: "Digitising complex processes to speed up services for citizens." },
+      { icon: "globe", title: "e-Gov Modernisation", text: "End-to-end digital transformation for maximum institutional transparency." },
+    ],
+    partners: "Institutions that trust us",
+    pausePartners: "Pause institutions carousel",
+    playPartners: "Resume institutions carousel",
+  },
+
+  quotes: {
+    label: "What people say about us",
+    items: [
+      {
+        text: "At Radical dev, we don't see regulatory compliance as mere red tape, but as the real driver of soundness that gives credibility to the digital solutions we build to power Angola's future.",
+        author: "Board of Directors",
+        role: "Radical dev • Governance & Risk",
+      },
+      {
+        text: "The platform built by Radical dev cut our customer response time in half. A partnership that transformed our operation.",
+        author: "Head of Information Systems",
+        role: "Kwanza Bank • Digital Transformation",
+      },
+      {
+        text: "We found a team that understands Angola, our challenges and our ambitions. The result exceeded every expectation.",
+        author: "Chief Executive",
+        role: "Lumen Saúde • General Management",
+      },
+      {
+        text: "With Radical dev's dashboards we now decide with real-time data. Our logistics are faster and more predictable.",
+        author: "Head of Operations",
+        role: "Atlas Logística • Operations",
+      },
+      {
+        text: "Radical Academy trained our team with rigour and care. We gained autonomy and a true digital culture.",
+        author: "HR Manager",
+        role: "Mukanda Educação • Talent & Culture",
+      },
+    ],
+    goTo: "Show quote",
+    previous: "Previous quote",
+    next: "Next quote",
+  },
+
+  footer: {
+    cta: {
+      eyebrow: "Ready to start?",
+      title: "Let's build the future together.",
+      text: "Tell us your idea and we'll turn it into a high-impact digital solution.",
+      button: { label: "Start a project", href: "#contactos" },
+    },
+    about:
+      "Technology with purpose for companies, governments and startups. We build digital solutions that move Angola and the world forward.",
+    columns: [
+      {
+        title: "Solutions",
+        links: [
+          { label: "Web development", href: "#solucoes" },
+          { label: "Mobile apps", href: "#solucoes" },
+          { label: "Data & AI", href: "#inovacao" },
+          { label: "UX/UI design", href: "#solucoes" },
+          { label: "Cloud & DevOps", href: "#solucoes" },
+        ],
+      },
+      {
+        title: "Company",
+        links: [
+          { label: "About us", href: "#sobre" },
+          { label: "Innovation", href: "#inovacao" },
+          { label: "Ecosystem", href: "#ecossistema" },
+          { label: "Careers", href: "#carreiras" },
+          { label: "Radical Academy", href: "#carreiras" },
+        ],
+      },
+    ],
+    contactTitle: "Contact",
+    hours: "Mon – Fri, 8am to 5pm",
+    followUs: "Follow us",
+    rights: "All rights reserved.",
+    legal: [
+      { label: "Privacy", href: "#privacidade" },
+      { label: "Terms of use", href: "#termos" },
+      { label: "Cookies", href: "#cookies" },
+    ],
+    backToTop: "Back to top",
+  },
+
   a11y: {
     home: "Radical dev — home page",
     main: "Main",
