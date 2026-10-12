@@ -1,6 +1,13 @@
 import type { Content } from "./pt";
 
 export const en: Content = {
+  meta: {
+    title: "Radical dev | Revolutionizing development with purpose",
+    description:
+      "Disruptive digital solutions for companies, governments and startups, driving national and global progress through cutting-edge technology.",
+    locale: "en_US",
+  },
+
   segments: ["Institutional", "Private", "Individuals", "NGOs"],
 
   links: [

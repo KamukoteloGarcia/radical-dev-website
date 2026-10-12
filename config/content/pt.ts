@@ -30,6 +30,13 @@ type Reason = { icon: ReasonIcon; title: string; text: string };
 type Quote = { text: string; author: string; role: string };
 
 export const pt = {
+  meta: {
+    title: "Radical dev | Revolucionando o desenvolvimento com propósito",
+    description:
+      "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
+    locale: "pt_AO",
+  },
+
   segments: ["Institucional", "Privadas", "Particulares", "ONGs"],
 
   links: [
