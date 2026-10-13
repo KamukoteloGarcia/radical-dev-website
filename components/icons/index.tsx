@@ -467,3 +467,12 @@ export function AtIcon(props: IconProps) {
     </Icon>
   );
 }
+
+export function GraduationCapIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 9.5 12 5l10 4.5-10 4.5Z" />
+      <path d="M6 11.3V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.7M22 9.5V15" />
+    </Icon>
+  );
+}

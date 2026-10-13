@@ -4,6 +4,7 @@ import type { InnovationClipId } from "@/config/innovation";
 import { aboutPt } from "./about/pt";
 import { careersPt } from "./careers/pt";
 import { contactPagePt } from "./contact/pt";
+import { ecosystemPt } from "./ecosystem/pt";
 import type { ProjectId, ScreenId } from "@/config/photos";
 
 type Slide = { id: BannerId; title: string; text: string };
@@ -51,7 +52,7 @@ export const pt = {
     { label: "Início", href: "/" },
     { label: "Serviços", href: "/#solucoes" },
     { label: "Inovação", href: "/inovacao" },
-    { label: "Ecossistema", href: "/#ecossistema" },
+    { label: "Ecossistema", href: "/ecossistema" },
     { label: "Carreiras", href: "/carreiras" },
     { label: "Contactos", href: "/contactos" },
     { label: "Sobre Nós", href: "/sobre" },
@@ -297,6 +298,7 @@ export const pt = {
   careers: careersPt,
   about: aboutPt,
   contactPage: contactPagePt,
+  ecosystem: ecosystemPt,
 
   footer: {
     cta: {
@@ -323,7 +325,7 @@ export const pt = {
         links: [
           { label: "Sobre nós", href: "/sobre" },
           { label: "Inovação", href: "/inovacao" },
-          { label: "Ecossistema", href: "/#ecossistema" },
+          { label: "Ecossistema", href: "/ecossistema" },
           { label: "Carreiras", href: "/carreiras" },
           { label: "Academia Radical", href: "/carreiras" },
         ],

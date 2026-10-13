@@ -13,3 +13,6 @@ Trimmed to 8s, 1280x720, muted and re-encoded for the web.
 - `about/talent.mp4` — https://mixkit.co/free-stock-video/a-young-black-man-with-dreadlocks-and-glasses-looking-at-50612/
 - `about/roots.mp4` — https://mixkit.co/free-stock-video/a-man-playing-on-an-african-drum-with-bright-flashing-45548/
 - `contact/support.mp4` — https://mixkit.co/free-stock-video/woman-on-a-phone-call-on-data-center-23081/
+- `ecosystem/startups.mp4` — https://mixkit.co/free-stock-video/a-young-graphic-designer-is-working-on-a-graphic-typography-50602/
+- `ecosystem/partners.mp4` — https://mixkit.co/free-stock-video/woman-using-a-tablet-in-a-wind-turbine-field-24129/
+- `ecosystem/community.mp4` — https://mixkit.co/free-stock-video/handsome-young-black-man-smiling-with-white-teeth-47982/

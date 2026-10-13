@@ -1,6 +1,7 @@
 import { aboutEn } from "./about/en";
 import { careersEn } from "./careers/en";
 import { contactPageEn } from "./contact/en";
+import { ecosystemEn } from "./ecosystem/en";
 import type { Content } from "./pt";
 
 export const en: Content = {
@@ -17,7 +18,7 @@ export const en: Content = {
     { label: "Home", href: "/" },
     { label: "Services", href: "/#solucoes" },
     { label: "Innovation", href: "/inovacao" },
-    { label: "Ecosystem", href: "/#ecossistema" },
+    { label: "Ecosystem", href: "/ecossistema" },
     { label: "Careers", href: "/carreiras" },
     { label: "Contact", href: "/contactos" },
     { label: "About Us", href: "/sobre" },
@@ -263,6 +264,7 @@ export const en: Content = {
   careers: careersEn,
   about: aboutEn,
   contactPage: contactPageEn,
+  ecosystem: ecosystemEn,
 
   footer: {
     cta: {
@@ -289,7 +291,7 @@ export const en: Content = {
         links: [
           { label: "About us", href: "/sobre" },
           { label: "Innovation", href: "/inovacao" },
-          { label: "Ecosystem", href: "/#ecossistema" },
+          { label: "Ecosystem", href: "/ecossistema" },
           { label: "Careers", href: "/carreiras" },
           { label: "Radical Academy", href: "/carreiras" },
         ],

@@ -50,3 +50,7 @@ Free-license photos (Unsplash License / Pexels License).
 
 - `about/team.webp` — https://www.pexels.com/photo/group-of-people-on-a-meeting-1367272/
 - `about/office.webp` — https://www.pexels.com/photo/interior-of-hall-of-modern-office-7534179/
+- `ecosystem/academy.webp` — https://www.pexels.com/photo/african-students-focused-on-classroom-studies-34162714/
+- `ecosystem/agro.webp` — https://www.pexels.com/photo/smiling-african-farmer-in-nigerian-field-33993456/
+- `ecosystem/health.webp` — https://www.pexels.com/photo/smiling-black-doctor-with-pad-writing-in-notebook-19957220/
+- `ecosystem/market.webp` — https://www.pexels.com/photo/crop-concentrated-ethnic-businesswoman-with-smartphone-5999793/
