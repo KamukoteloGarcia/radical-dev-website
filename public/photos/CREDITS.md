@@ -47,3 +47,6 @@ Free-license photos (Unsplash License / Pexels License).
 - `careers/hr.webp` — https://www.pexels.com/photo/woman-sitting-in-front-of-a-computer-while-talking-on-the-phone-3894377/
 - `careers/tech.webp` — https://www.pexels.com/photo/man-writing-a-code-on-a-computer-and-laptop-9553905/
 - `careers/marketing.webp` — https://www.pexels.com/photo/woman-sits-in-front-of-black-laptop-computer-1181649/
+
+- `about/team.webp` — https://www.pexels.com/photo/group-of-people-on-a-meeting-1367272/
+- `about/office.webp` — https://www.pexels.com/photo/interior-of-hall-of-modern-office-7534179/

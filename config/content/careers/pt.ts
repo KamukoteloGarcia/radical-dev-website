@@ -20,7 +20,7 @@ export const careersPt = {
     team: "Cultura de equipa",
     growth: "Crescimento",
   } satisfies Record<CareerClipId, string>,
-  controls: { chapters: "Cenas do vídeo", goTo: "Ver cena", pause: "Pausar vídeo", play: "Reproduzir vídeo" },
+  controls: { chapters: "Cenas do vídeo", goTo: "Ver cena" },
 
   featured: {
     badge: "Vaga em destaque",

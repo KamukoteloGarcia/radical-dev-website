@@ -38,8 +38,8 @@ export function VideoHero({ id, text, clips, clipSeconds, labels }: VideoHeroPro
 
       <div className="container-site py-16 lg:py-20">
         <VideoShowcase clips={clips} clipSeconds={clipSeconds} labels={labels} controls={text.controls}>
-          <p className="inline-flex items-center gap-2 rounded-full border border-line bg-fg/5 px-4 py-1.5 text-[12px] font-medium uppercase tracking-[0.2em] text-muted motion-safe:animate-rise">
-            <span className="size-1.5 rounded-full bg-red" />
+          <p className="flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-red motion-safe:animate-rise">
+            <span aria-hidden="true" className="h-[2px] w-10 rounded-full bg-red" />
             {text.eyebrow}
           </p>
 

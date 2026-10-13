@@ -1,3 +1,4 @@
+import { aboutEn } from "./about/en";
 import { careersEn } from "./careers/en";
 import type { Content } from "./pt";
 
@@ -18,7 +19,7 @@ export const en: Content = {
     { label: "Ecosystem", href: "/#ecossistema" },
     { label: "Careers", href: "/carreiras" },
     { label: "Contact", href: "#contactos" },
-    { label: "About Us", href: "/#sobre" },
+    { label: "About Us", href: "/sobre" },
   ],
 
   hero: {
@@ -59,7 +60,7 @@ export const en: Content = {
       lines: [" talent,", "global", "impact."],
       description:
         "Engineers, designers and consultants dedicated to making your project happen, with rigour and passion.",
-      primary: { label: "Meet the team", href: "/#sobre" },
+      primary: { label: "Meet the team", href: "/sobre" },
       secondary: { label: "Work with us", href: "/carreiras" },
     },
   },
@@ -230,7 +231,7 @@ export const en: Content = {
       product: "Product & Data",
       cloud: "Cloud & Infrastructure",
     },
-    controls: { chapters: "Video scenes", goTo: "Show scene", pause: "Pause video", play: "Play video" },
+    controls: { chapters: "Video scenes", goTo: "Show scene" },
 
     lab: {
       title: "Where ideas take shape.",
@@ -259,6 +260,7 @@ export const en: Content = {
   },
 
   careers: careersEn,
+  about: aboutEn,
 
   footer: {
     cta: {
@@ -283,7 +285,7 @@ export const en: Content = {
       {
         title: "Company",
         links: [
-          { label: "About us", href: "/#sobre" },
+          { label: "About us", href: "/sobre" },
           { label: "Innovation", href: "/inovacao" },
           { label: "Ecosystem", href: "/#ecossistema" },
           { label: "Careers", href: "/carreiras" },

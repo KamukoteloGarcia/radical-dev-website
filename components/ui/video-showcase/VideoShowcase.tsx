@@ -24,21 +24,19 @@ type VideoShowcaseProps = {
 };
 
 // Owns the playback state shared by the chapter bar (left) and the 3D video deck (right).
-// Videos stay still for visitors who prefer reduced motion (they can still press play)
-// and pause while the banner is off screen.
+// Videos stay still (poster frames) for visitors who prefer reduced motion and pause while
+// the banner is off screen; clicking a chapter always switches the scene.
 export function VideoShowcase({ children, clips, clipSeconds, labels, controls }: VideoShowcaseProps) {
   const prefersReducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
     () => window.matchMedia(reducedMotionQuery).matches,
     () => false,
   );
-  const [userPaused, setUserPaused] = useState<boolean | null>(null);
   const [isVisible, setIsVisible] = useState(true);
   const [active, setActive] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
 
-  const isPaused = userPaused ?? prefersReducedMotion;
-  const playing = !isPaused && isVisible;
+  const playing = !prefersReducedMotion && isVisible;
 
   useEffect(() => {
     const root = rootRef.current;
@@ -57,9 +55,7 @@ export function VideoShowcase({ children, clips, clipSeconds, labels, controls }
           labels={labels}
           active={active}
           playing={playing}
-          isPaused={isPaused}
           onSelect={setActive}
-          onTogglePause={() => setUserPaused(!isPaused)}
           text={controls}
         />
       </div>

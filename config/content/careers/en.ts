@@ -17,7 +17,7 @@ export const careersEn: CareersContent = {
     team: "Team culture",
     growth: "Growth",
   },
-  controls: { chapters: "Video scenes", goTo: "Show scene", pause: "Pause video", play: "Play video" },
+  controls: { chapters: "Video scenes", goTo: "Show scene" },
 
   featured: {
     badge: "Featured job",

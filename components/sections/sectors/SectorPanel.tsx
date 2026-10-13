@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowRightIcon, BoltIcon, BuildingIcon, CheckCircleIcon, GemIcon, GridIcon, UsersOutlineIcon } from "@/components/icons";
+import { ArrowRightIcon, BoltIcon, BuildingIcon, CheckCircleIcon, GemIcon, GridIcon } from "@/components/icons";
+import { StatBadge } from "@/components/ui/StatBadge";
 import type { Content } from "@/config/content";
 import type { SectorId } from "@/config/content/pt";
 import { cn } from "@/lib/cn";
@@ -67,19 +68,7 @@ export function SectorPanel({ sector, image, explore }: SectorPanelProps) {
           <Image src={image} alt="" fill unoptimized className="object-cover" />
         </div>
 
-        {/* Stats badge overlapping the photo's bottom-right corner */}
-        <div
-          {...rise(
-            750,
-            "absolute bottom-0 right-0 w-[160px] rounded-[14px] bg-red px-4 pb-3.5 pt-4 text-white shadow-[0_18px_36px_-14px_var(--glow)] sm:w-[176px]",
-          )}
-        >
-          <span className="absolute -right-2 -top-4 grid size-10 place-items-center rounded-xl bg-[#141416] text-white shadow-lg">
-            <UsersOutlineIcon className="size-5" />
-          </span>
-          <p className="font-display text-[28px] font-semibold leading-none">{sector.stat}</p>
-          <p className="mt-1.5 text-[12px] font-medium leading-snug">{sector.statLabel}</p>
-        </div>
+        <StatBadge stat={sector.stat} label={sector.statLabel} {...rise(750)} />
       </div>
     </div>
   );

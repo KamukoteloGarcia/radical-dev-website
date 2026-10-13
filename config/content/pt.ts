@@ -1,6 +1,7 @@
 import type { BannerId } from "@/config/banners";
 import type { HeroSlideId } from "@/config/hero";
 import type { InnovationClipId } from "@/config/innovation";
+import { aboutPt } from "./about/pt";
 import { careersPt } from "./careers/pt";
 import type { ProjectId, ScreenId } from "@/config/photos";
 
@@ -52,7 +53,7 @@ export const pt = {
     { label: "Ecossistema", href: "/#ecossistema" },
     { label: "Carreiras", href: "/carreiras" },
     { label: "Contactos", href: "#contactos" },
-    { label: "Sobre Nós", href: "/#sobre" },
+    { label: "Sobre Nós", href: "/sobre" },
   ],
 
   hero: {
@@ -93,7 +94,7 @@ export const pt = {
       lines: [" angolano,", "impacto", "global."],
       description:
         "Engenheiros, designers e consultores dedicados a fazer o seu projeto acontecer, com rigor e paixão.",
-      primary: { label: "Conhecer a equipa", href: "/#sobre" },
+      primary: { label: "Conhecer a equipa", href: "/sobre" },
       secondary: { label: "Trabalhe connosco", href: "/carreiras" },
     },
   } satisfies Record<HeroSlideId, HeroText>,
@@ -264,7 +265,7 @@ export const pt = {
       product: "Produto & Dados",
       cloud: "Cloud & Infraestrutura",
     } satisfies Record<InnovationClipId, string>,
-    controls: { chapters: "Cenas do vídeo", goTo: "Ver cena", pause: "Pausar vídeo", play: "Reproduzir vídeo" },
+    controls: { chapters: "Cenas do vídeo", goTo: "Ver cena" },
 
     lab: {
       title: "Onde as ideias ganham forma.",
@@ -293,6 +294,7 @@ export const pt = {
   },
 
   careers: careersPt,
+  about: aboutPt,
 
   footer: {
     cta: {
@@ -317,7 +319,7 @@ export const pt = {
       {
         title: "Empresa",
         links: [
-          { label: "Sobre nós", href: "/#sobre" },
+          { label: "Sobre nós", href: "/sobre" },
           { label: "Inovação", href: "/inovacao" },
           { label: "Ecossistema", href: "/#ecossistema" },
           { label: "Carreiras", href: "/carreiras" },

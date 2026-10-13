@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Hide the floating "N" dev-tools button in `next dev` (errors are still shown).
+  devIndicators: false,
 };
 
 export default nextConfig;
