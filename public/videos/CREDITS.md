@@ -9,3 +9,13 @@ Trimmed to 8s, 1280x720, muted and re-encoded for the web.
 - `careers/interview.mp4` — https://mixkit.co/free-stock-video/man-being-interviewed-over-a-video-call-46021/
 - `careers/culture.mp4` — https://mixkit.co/free-stock-video/group-of-friends-talking-in-the-cafeteria-23205/
 - `careers/growth.mp4` — https://mixkit.co/free-stock-video/woman-celebrating-in-her-desk-23719/
+- `about/vision.mp4` — https://mixkit.co/free-stock-video/man-introducing-a-new-business-project-1817/
+- `about/talent.mp4` — https://mixkit.co/free-stock-video/a-young-black-man-with-dreadlocks-and-glasses-looking-at-50612/
+- `about/roots.mp4` — https://mixkit.co/free-stock-video/a-man-playing-on-an-african-drum-with-bright-flashing-45548/
+- `contact/support.mp4` — https://mixkit.co/free-stock-video/woman-on-a-phone-call-on-data-center-23081/
+- `ecosystem/startups.mp4` — https://mixkit.co/free-stock-video/a-young-graphic-designer-is-working-on-a-graphic-typography-50602/
+- `ecosystem/partners.mp4` — https://mixkit.co/free-stock-video/woman-using-a-tablet-in-a-wind-turbine-field-24129/
+- `ecosystem/community.mp4` — https://mixkit.co/free-stock-video/handsome-young-black-man-smiling-with-white-teeth-47982/
+- `services/web.mp4` — https://mixkit.co/free-stock-video/portrait-of-a-man-working-in-front-of-his-computer-41170/
+- `services/mobile.mp4` (cropped to 16:9) — https://mixkit.co/free-stock-video/happy-man-texting-on-his-smartphone-41174/
+- `services/cloud.mp4` (cropped) — https://mixkit.co/free-stock-video/woman-working-with-tablet-in-power-plant-23489/

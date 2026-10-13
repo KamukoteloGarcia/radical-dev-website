@@ -1,4 +1,8 @@
+import { aboutEn } from "./about/en";
 import { careersEn } from "./careers/en";
+import { contactPageEn } from "./contact/en";
+import { ecosystemEn } from "./ecosystem/en";
+import { servicesEn } from "./services/en";
 import type { Content } from "./pt";
 
 export const en: Content = {
@@ -13,12 +17,12 @@ export const en: Content = {
 
   links: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/#solucoes" },
+    { label: "Services", href: "/servicos" },
     { label: "Innovation", href: "/inovacao" },
-    { label: "Ecosystem", href: "/#ecossistema" },
+    { label: "Ecosystem", href: "/ecossistema" },
     { label: "Careers", href: "/carreiras" },
-    { label: "Contact", href: "#contactos" },
-    { label: "About Us", href: "/#sobre" },
+    { label: "Contact", href: "/contactos" },
+    { label: "About Us", href: "/sobre" },
   ],
 
   hero: {
@@ -28,7 +32,7 @@ export const en: Content = {
       description:
         "Disruptive digital solutions for companies, governments and startups, driving national and global progress through cutting-edge technology.",
       primary: { label: "Explore our solutions", href: "/#solucoes" },
-      secondary: { label: "Get in touch", href: "#contactos" },
+      secondary: { label: "Get in touch", href: "/contactos" },
     },
     web: {
       highlight: "Web platforms",
@@ -36,7 +40,7 @@ export const en: Content = {
       description:
         "Tailor-made portals, online stores and management systems with world-class performance and a focus on your business.",
       primary: { label: "See web solutions", href: "/#solucoes" },
-      secondary: { label: "Talk to an expert", href: "#contactos" },
+      secondary: { label: "Talk to an expert", href: "/contactos" },
     },
     data: {
       highlight: "Data",
@@ -44,7 +48,7 @@ export const en: Content = {
       description:
         "Dashboards, Business Intelligence and artificial intelligence that turn information into real results.",
       primary: { label: "Discover data & AI", href: "/inovacao" },
-      secondary: { label: "Request a demo", href: "#contactos" },
+      secondary: { label: "Request a demo", href: "/contactos" },
     },
     design: {
       highlight: "Digital",
@@ -52,14 +56,14 @@ export const en: Content = {
       description:
         "People-centred UX/UI design, from user research to a final product ready to grow.",
       primary: { label: "See our design", href: "/#solucoes" },
-      secondary: { label: "Start a project", href: "#contactos" },
+      secondary: { label: "Start a project", href: "/contactos" },
     },
     team: {
       highlight: "Angolan",
       lines: [" talent,", "global", "impact."],
       description:
         "Engineers, designers and consultants dedicated to making your project happen, with rigour and passion.",
-      primary: { label: "Meet the team", href: "/#sobre" },
+      primary: { label: "Meet the team", href: "/sobre" },
       secondary: { label: "Work with us", href: "/carreiras" },
     },
   },
@@ -100,7 +104,7 @@ export const en: Content = {
       title: "Institutional",
       text: "Strategic partner for Public Administration, ensuring administrative modernisation and government efficiency through mission-critical systems.",
       features: ["Institutional Websites", "Government Apps", "e-Gov Systems", "Cybersecurity"],
-      cta: { label: "Request a Quote", href: "#contactos" },
+      cta: { label: "Request a Quote", href: "/contactos" },
     },
     cards: [
       {
@@ -230,7 +234,7 @@ export const en: Content = {
       product: "Product & Data",
       cloud: "Cloud & Infrastructure",
     },
-    controls: { chapters: "Video scenes", goTo: "Show scene", pause: "Pause video", play: "Play video" },
+    controls: { chapters: "Video scenes", goTo: "Show scene" },
 
     lab: {
       title: "Where ideas take shape.",
@@ -241,7 +245,7 @@ export const en: Content = {
         { icon: "agile", label: "Agile development" },
         { icon: "scale", label: "Global scalability" },
       ],
-      cta: { label: "Get in touch", href: "#contactos" },
+      cta: { label: "Get in touch", href: "/contactos" },
       imageAlt: "Developer writing code on a laptop and a monitor",
     },
 
@@ -251,21 +255,25 @@ export const en: Content = {
       more: { label: "See more", href: "/#sectores" },
       view: "View project",
       items: [
-        { id: "community", name: "Kanda Solidária", tag: "NGOs / Volunteering", href: "#contactos" },
-        { id: "fintech", name: "Kumbu Pay", tag: "AI / Banking", href: "#contactos" },
-        { id: "corporate", name: "Kianda Corporate", tag: "Corporate Web", href: "#contactos" },
+        { id: "community", name: "Kanda Solidária", tag: "NGOs / Volunteering", href: "/contactos" },
+        { id: "fintech", name: "Kumbu Pay", tag: "AI / Banking", href: "/contactos" },
+        { id: "corporate", name: "Kianda Corporate", tag: "Corporate Web", href: "/contactos" },
       ],
     },
   },
 
   careers: careersEn,
+  about: aboutEn,
+  contactPage: contactPageEn,
+  ecosystem: ecosystemEn,
+  services: servicesEn,
 
   footer: {
     cta: {
       eyebrow: "Ready to start?",
       title: "Let's build the future together.",
       text: "Tell us your idea and we'll turn it into a high-impact digital solution.",
-      button: { label: "Start a project", href: "#contactos" },
+      button: { label: "Start a project", href: "/contactos" },
     },
     about:
       "Technology with purpose for companies, governments and startups. We build digital solutions that move Angola and the world forward.",
@@ -283,9 +291,9 @@ export const en: Content = {
       {
         title: "Company",
         links: [
-          { label: "About us", href: "/#sobre" },
+          { label: "About us", href: "/sobre" },
           { label: "Innovation", href: "/inovacao" },
-          { label: "Ecosystem", href: "/#ecossistema" },
+          { label: "Ecosystem", href: "/ecossistema" },
           { label: "Careers", href: "/carreiras" },
           { label: "Radical Academy", href: "/carreiras" },
         ],

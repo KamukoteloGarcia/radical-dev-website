@@ -1,7 +1,11 @@
 import type { BannerId } from "@/config/banners";
 import type { HeroSlideId } from "@/config/hero";
 import type { InnovationClipId } from "@/config/innovation";
+import { aboutPt } from "./about/pt";
 import { careersPt } from "./careers/pt";
+import { contactPagePt } from "./contact/pt";
+import { ecosystemPt } from "./ecosystem/pt";
+import { servicesPt } from "./services/pt";
 import type { ProjectId, ScreenId } from "@/config/photos";
 
 type Slide = { id: BannerId; title: string; text: string };
@@ -47,12 +51,12 @@ export const pt = {
 
   links: [
     { label: "Início", href: "/" },
-    { label: "Serviços", href: "/#solucoes" },
+    { label: "Serviços", href: "/servicos" },
     { label: "Inovação", href: "/inovacao" },
-    { label: "Ecossistema", href: "/#ecossistema" },
+    { label: "Ecossistema", href: "/ecossistema" },
     { label: "Carreiras", href: "/carreiras" },
-    { label: "Contactos", href: "#contactos" },
-    { label: "Sobre Nós", href: "/#sobre" },
+    { label: "Contactos", href: "/contactos" },
+    { label: "Sobre Nós", href: "/sobre" },
   ],
 
   hero: {
@@ -62,7 +66,7 @@ export const pt = {
       description:
         "Soluções digitais disruptivas para empresas, governos e startups, impulsionando o progresso nacional e global através de tecnologia de ponta.",
       primary: { label: "Explore nossas soluções", href: "/#solucoes" },
-      secondary: { label: "Entre em contato", href: "#contactos" },
+      secondary: { label: "Entre em contato", href: "/contactos" },
     },
     web: {
       highlight: "Plataformas web",
@@ -70,7 +74,7 @@ export const pt = {
       description:
         "Portais, lojas online e sistemas de gestão à medida, com desempenho de nível mundial e foco no seu negócio.",
       primary: { label: "Ver soluções web", href: "/#solucoes" },
-      secondary: { label: "Fale com um especialista", href: "#contactos" },
+      secondary: { label: "Fale com um especialista", href: "/contactos" },
     },
     data: {
       highlight: "Dados",
@@ -78,7 +82,7 @@ export const pt = {
       description:
         "Dashboards, Business Intelligence e inteligência artificial para transformar informação em resultados reais.",
       primary: { label: "Conhecer dados & IA", href: "/inovacao" },
-      secondary: { label: "Pedir uma demonstração", href: "#contactos" },
+      secondary: { label: "Pedir uma demonstração", href: "/contactos" },
     },
     design: {
       highlight: "Experiências",
@@ -86,14 +90,14 @@ export const pt = {
       description:
         "Design UX/UI centrado nas pessoas, da pesquisa com utilizadores ao produto final pronto a crescer.",
       primary: { label: "Ver o nosso design", href: "/#solucoes" },
-      secondary: { label: "Começar um projeto", href: "#contactos" },
+      secondary: { label: "Começar um projeto", href: "/contactos" },
     },
     team: {
       highlight: "Talento",
       lines: [" angolano,", "impacto", "global."],
       description:
         "Engenheiros, designers e consultores dedicados a fazer o seu projeto acontecer, com rigor e paixão.",
-      primary: { label: "Conhecer a equipa", href: "/#sobre" },
+      primary: { label: "Conhecer a equipa", href: "/sobre" },
       secondary: { label: "Trabalhe connosco", href: "/carreiras" },
     },
   } satisfies Record<HeroSlideId, HeroText>,
@@ -134,7 +138,7 @@ export const pt = {
       title: "Institucional",
       text: "Parceiro estratégico para a Administração Pública, garantindo a modernização administrativa e a eficiência governativa através de sistemas de alta criticidade.",
       features: ["Websites Institucionais", "Apps Governamentais", "Sistemas e-Gov", "Cibersegurança"],
-      cta: { label: "Pedir Orçamento", href: "#contactos" },
+      cta: { label: "Pedir Orçamento", href: "/contactos" },
     },
     cards: [
       {
@@ -264,7 +268,7 @@ export const pt = {
       product: "Produto & Dados",
       cloud: "Cloud & Infraestrutura",
     } satisfies Record<InnovationClipId, string>,
-    controls: { chapters: "Cenas do vídeo", goTo: "Ver cena", pause: "Pausar vídeo", play: "Reproduzir vídeo" },
+    controls: { chapters: "Cenas do vídeo", goTo: "Ver cena" },
 
     lab: {
       title: "Onde as ideias ganham forma.",
@@ -275,7 +279,7 @@ export const pt = {
         { icon: "agile", label: "Desenvolvimento ágil" },
         { icon: "scale", label: "Escalabilidade global" },
       ] as LabFeature[],
-      cta: { label: "Entrar em contacto", href: "#contactos" },
+      cta: { label: "Entrar em contacto", href: "/contactos" },
       imageAlt: "Programador a escrever código num portátil e num monitor",
     },
 
@@ -285,21 +289,25 @@ export const pt = {
       more: { label: "Ver mais", href: "/#sectores" },
       view: "Ver projecto",
       items: [
-        { id: "community", name: "Kanda Solidária", tag: "ONGs / Voluntariado", href: "#contactos" },
-        { id: "fintech", name: "Kumbu Pay", tag: "IA / Banca", href: "#contactos" },
-        { id: "corporate", name: "Kianda Corporate", tag: "Web Institucional", href: "#contactos" },
+        { id: "community", name: "Kanda Solidária", tag: "ONGs / Voluntariado", href: "/contactos" },
+        { id: "fintech", name: "Kumbu Pay", tag: "IA / Banca", href: "/contactos" },
+        { id: "corporate", name: "Kianda Corporate", tag: "Web Institucional", href: "/contactos" },
       ] as Project[],
     },
   },
 
   careers: careersPt,
+  about: aboutPt,
+  contactPage: contactPagePt,
+  ecosystem: ecosystemPt,
+  services: servicesPt,
 
   footer: {
     cta: {
       eyebrow: "Pronto para começar?",
       title: "Vamos construir o futuro juntos.",
       text: "Conte-nos a sua ideia e transformamo-la numa solução digital de impacto.",
-      button: { label: "Iniciar um projeto", href: "#contactos" },
+      button: { label: "Iniciar um projeto", href: "/contactos" },
     },
     about:
       "Tecnologia com propósito para empresas, governos e startups. Desenvolvemos soluções digitais que impulsionam Angola e o mundo.",
@@ -317,9 +325,9 @@ export const pt = {
       {
         title: "Empresa",
         links: [
-          { label: "Sobre nós", href: "/#sobre" },
+          { label: "Sobre nós", href: "/sobre" },
           { label: "Inovação", href: "/inovacao" },
-          { label: "Ecossistema", href: "/#ecossistema" },
+          { label: "Ecossistema", href: "/ecossistema" },
           { label: "Carreiras", href: "/carreiras" },
           { label: "Academia Radical", href: "/carreiras" },
         ],

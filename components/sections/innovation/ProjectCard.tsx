@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { scrollItem } from "@/components/ui/scroll-row";
+import { cn } from "@/lib/cn";
 import { ProjectSparks } from "./ProjectSparks";
 
 type ProjectCardProps = {
@@ -16,7 +18,7 @@ type ProjectCardProps = {
 // sparks rise and an arrow button pops in the middle.
 export function ProjectCard({ name, tag, href, image, viewLabel }: ProjectCardProps) {
   return (
-    <li className="group overflow-hidden rounded-[28px] bg-card shadow-[0_18px_40px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/5 transition duration-500 ease-out hover:shadow-[0_34px_60px_-28px_rgba(163,17,28,0.45)] focus-within:shadow-[0_34px_60px_-28px_rgba(163,17,28,0.45)] motion-safe:hover:-translate-y-2 motion-safe:focus-within:-translate-y-2">
+    <li className={cn(scrollItem, "group overflow-hidden rounded-[28px] bg-card shadow-[0_18px_40px_-24px_rgba(0,0,0,0.35)] ring-1 ring-black/5 transition duration-500 ease-out hover:shadow-[0_34px_60px_-28px_rgba(163,17,28,0.45)] focus-within:shadow-[0_34px_60px_-28px_rgba(163,17,28,0.45)] motion-safe:hover:-translate-y-2 motion-safe:focus-within:-translate-y-2")}>
       <div className="relative isolate aspect-[6/5] overflow-hidden">
         <Image src={image} alt="" fill unoptimized className="-z-10 object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
 

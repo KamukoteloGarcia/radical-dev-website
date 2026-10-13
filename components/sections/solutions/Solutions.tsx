@@ -51,7 +51,7 @@ export async function Solutions() {
                 className="min-h-[270px]"
               >
                 <p className="mt-2 line-clamp-2 max-w-[380px] text-[14px] leading-relaxed text-white/80">{card.text}</p>
-                <a href="#contactos" className="mt-4 inline-flex w-fit items-center gap-1.5 text-[14px] font-semibold">
+                <a href="/contactos" className="mt-4 inline-flex w-fit items-center gap-1.5 text-[14px] font-semibold">
                   {solutions.more}
                   <span className="sr-only">: {card.title}</span>
                   <ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-1" />

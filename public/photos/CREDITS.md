@@ -47,3 +47,14 @@ Free-license photos (Unsplash License / Pexels License).
 - `careers/hr.webp` — https://www.pexels.com/photo/woman-sitting-in-front-of-a-computer-while-talking-on-the-phone-3894377/
 - `careers/tech.webp` — https://www.pexels.com/photo/man-writing-a-code-on-a-computer-and-laptop-9553905/
 - `careers/marketing.webp` — https://www.pexels.com/photo/woman-sits-in-front-of-black-laptop-computer-1181649/
+
+- `about/team.webp` — https://www.pexels.com/photo/group-of-people-on-a-meeting-1367272/
+- `about/office.webp` — https://www.pexels.com/photo/interior-of-hall-of-modern-office-7534179/
+- `ecosystem/academy.webp` — https://www.pexels.com/photo/african-students-focused-on-classroom-studies-34162714/
+- `ecosystem/agro.webp` — https://www.pexels.com/photo/smiling-african-farmer-in-nigerian-field-33993456/
+- `ecosystem/health.webp` — https://www.pexels.com/photo/smiling-black-doctor-with-pad-writing-in-notebook-19957220/
+- `ecosystem/market.webp` — https://www.pexels.com/photo/crop-concentrated-ethnic-businesswoman-with-smartphone-5999793/
+- `services/institutional.webp` — https://www.pexels.com/photo/34131094/
+- `services/private.webp` — https://www.pexels.com/photo/12179674/
+- `services/individuals.webp` — https://www.pexels.com/photo/smiling-black-woman-working-on-laptop-at-home-6953924/
+- `services/ngos.webp` — https://www.pexels.com/photo/joyful-group-of-children-smiling-in-nigeria-30037382/

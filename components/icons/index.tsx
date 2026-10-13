@@ -431,3 +431,48 @@ export function ArrowUpRightIcon(props: IconProps) {
     </Icon>
   );
 }
+
+export function TargetIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+      <circle cx="12" cy="12" r="1.5" />
+    </Icon>
+  );
+}
+
+export function EyeIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </Icon>
+  );
+}
+
+export function LeafIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M21 3C9 3 3 9 3 17c0 1.4.2 2.7.6 4l1.9-1.9C9 15.5 12 13 16 11c-3.6 2.4-6.4 5.4-8.6 8.9C8.9 20.6 10.4 21 12 21c6 0 9-5 9-12V3Z" />
+    </svg>
+  );
+}
+
+export function AtIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+    </Icon>
+  );
+}
+
+export function GraduationCapIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M2 9.5 12 5l10 4.5-10 4.5Z" />
+      <path d="M6 11.3V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.7M22 9.5V15" />
+    </Icon>
+  );
+}

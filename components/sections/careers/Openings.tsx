@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { scrollRow } from "@/components/ui/scroll-row";
 import { careerPhotos } from "@/config/careers";
+import { cn } from "@/lib/cn";
 import { getContent, getLanguage } from "@/lib/preferences";
 import { FeaturedJob } from "./FeaturedJob";
 import { OpeningCard } from "./OpeningCard";
@@ -35,7 +37,7 @@ export async function Openings() {
           </Link>
         </div>
 
-        <ul className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className={cn(scrollRow, "mt-12 md:grid-cols-2 md:gap-7 lg:grid-cols-3")}>
           {openings.items.map((item) => (
             <OpeningCard
               key={item.id}
