@@ -5,6 +5,7 @@ import { aboutPt } from "./about/pt";
 import { careersPt } from "./careers/pt";
 import { contactPagePt } from "./contact/pt";
 import { ecosystemPt } from "./ecosystem/pt";
+import { servicesPt } from "./services/pt";
 import type { ProjectId, ScreenId } from "@/config/photos";
 
 type Slide = { id: BannerId; title: string; text: string };
@@ -50,7 +51,7 @@ export const pt = {
 
   links: [
     { label: "Início", href: "/" },
-    { label: "Serviços", href: "/#solucoes" },
+    { label: "Serviços", href: "/servicos" },
     { label: "Inovação", href: "/inovacao" },
     { label: "Ecossistema", href: "/ecossistema" },
     { label: "Carreiras", href: "/carreiras" },
@@ -299,6 +300,7 @@ export const pt = {
   about: aboutPt,
   contactPage: contactPagePt,
   ecosystem: ecosystemPt,
+  services: servicesPt,
 
   footer: {
     cta: {

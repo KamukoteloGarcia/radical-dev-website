@@ -54,3 +54,7 @@ Free-license photos (Unsplash License / Pexels License).
 - `ecosystem/agro.webp` — https://www.pexels.com/photo/smiling-african-farmer-in-nigerian-field-33993456/
 - `ecosystem/health.webp` — https://www.pexels.com/photo/smiling-black-doctor-with-pad-writing-in-notebook-19957220/
 - `ecosystem/market.webp` — https://www.pexels.com/photo/crop-concentrated-ethnic-businesswoman-with-smartphone-5999793/
+- `services/institutional.webp` — https://www.pexels.com/photo/34131094/
+- `services/private.webp` — https://www.pexels.com/photo/12179674/
+- `services/individuals.webp` — https://www.pexels.com/photo/smiling-black-woman-working-on-laptop-at-home-6953924/
+- `services/ngos.webp` — https://www.pexels.com/photo/joyful-group-of-children-smiling-in-nigeria-30037382/

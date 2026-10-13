@@ -17,7 +17,14 @@ export async function WhyUs() {
           ))}
         </ul>
 
-        <PartnerLogos label={whyUs.partners} pauseLabel={whyUs.pausePartners} playLabel={whyUs.playPartners} />
+        <div className="mt-24">
+          <PartnerLogos
+            headingId="parceiros-titulo"
+            title={whyUs.partners}
+            pauseLabel={whyUs.pausePartners}
+            playLabel={whyUs.playPartners}
+          />
+        </div>
       </div>
     </section>
   );

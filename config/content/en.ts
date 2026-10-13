@@ -2,6 +2,7 @@ import { aboutEn } from "./about/en";
 import { careersEn } from "./careers/en";
 import { contactPageEn } from "./contact/en";
 import { ecosystemEn } from "./ecosystem/en";
+import { servicesEn } from "./services/en";
 import type { Content } from "./pt";
 
 export const en: Content = {
@@ -16,7 +17,7 @@ export const en: Content = {
 
   links: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/#solucoes" },
+    { label: "Services", href: "/servicos" },
     { label: "Innovation", href: "/inovacao" },
     { label: "Ecosystem", href: "/ecossistema" },
     { label: "Careers", href: "/carreiras" },
@@ -265,6 +266,7 @@ export const en: Content = {
   about: aboutEn,
   contactPage: contactPageEn,
   ecosystem: ecosystemEn,
+  services: servicesEn,
 
   footer: {
     cta: {
