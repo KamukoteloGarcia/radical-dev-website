@@ -11,7 +11,7 @@ export function SegmentTabs({ items, label }: SegmentTabsProps) {
   return (
     <nav
       aria-label={label}
-      className="flex min-w-0 items-center gap-6 overflow-x-auto [scrollbar-width:none] lg:gap-8"
+      className="flex min-w-0 items-center gap-6 overflow-x-auto pr-6 [mask-image:linear-gradient(to_right,#000_80%,transparent)] [scrollbar-width:none] sm:pr-0 sm:[mask-image:none] lg:gap-8"
     >
       {items.map((item, i) => (
         <button
