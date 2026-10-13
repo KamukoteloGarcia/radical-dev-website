@@ -27,7 +27,7 @@ export const careersPt = {
     title: "Programador Front-end",
     text: "Procuramos um talento apaixonado por criar interfaces excepcionais. Vai trabalhar com React, Next.js e Tailwind CSS, focado em experiências UI/UX de alta performance para utilizadores em Angola e no mundo.",
     tags: ["React", "Next.js", "UI/UX"],
-    cta: { label: "Candidatar-me", href: "#contactos" },
+    cta: { label: "Candidatar-me", href: "/contactos" },
     imageAlt: "Mãos de um programador a escrever código num portátil",
   },
 
@@ -37,9 +37,9 @@ export const careersPt = {
     details: "Ver detalhes",
     count: { one: "{n} vaga disponível", other: "{n} vagas disponíveis" },
     items: [
-      { id: "hr", title: "Recursos Humanos", count: 1, href: "#contactos" },
-      { id: "tech", title: "Tecnologia de Informação", count: 4, href: "#contactos" },
-      { id: "marketing", title: "Marketing e Publicidade", count: 1, href: "#contactos" },
+      { id: "hr", title: "Recursos Humanos", count: 1, href: "/contactos" },
+      { id: "tech", title: "Tecnologia de Informação", count: 4, href: "/contactos" },
+      { id: "marketing", title: "Marketing e Publicidade", count: 1, href: "/contactos" },
     ] as Opening[],
   },
 };

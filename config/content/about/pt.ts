@@ -15,7 +15,7 @@ export const aboutPt = {
   title: "Tecnologia angolana com",
   highlight: "propósito.",
   text: "Somos engenheiros, designers e criativos de Luanda a construir soluções digitais para empresas, governos e comunidades, com orgulho nas nossas raízes.",
-  cta: { label: "Fale connosco", href: "#contactos" },
+  cta: { label: "Fale connosco", href: "/contactos" },
   chapters: {
     vision: "A nossa visão",
     talent: "Talento angolano",

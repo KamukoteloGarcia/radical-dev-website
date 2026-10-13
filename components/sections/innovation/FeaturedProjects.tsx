@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons";
+import { scrollRow } from "@/components/ui/scroll-row";
 import { projectPhotos } from "@/config/photos";
+import { cn } from "@/lib/cn";
 import { getContent } from "@/lib/preferences";
 import { ProjectCard } from "./ProjectCard";
 
@@ -33,7 +35,7 @@ export async function FeaturedProjects() {
           </Link>
         </div>
 
-        <ul className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-11">
+        <ul className={cn(scrollRow, "mt-14 md:grid-cols-2 md:gap-8 lg:mt-20 lg:grid-cols-3 lg:gap-11")}>
           {projects.items.map((project) => (
             <ProjectCard
               key={project.id}

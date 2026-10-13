@@ -53,7 +53,7 @@ export function SectorPanel({ sector, image, explore }: SectorPanelProps) {
         </ul>
         <div {...rise(afterPoints, "mt-7")}>
           <a
-            href="#contactos"
+            href="/contactos"
             className="group inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-[14px] font-medium text-bg transition hover:bg-red hover:text-white"
           >
             {explore}

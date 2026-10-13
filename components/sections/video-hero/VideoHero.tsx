@@ -1,17 +1,9 @@
-import { ArrowRightIcon } from "@/components/icons";
 import { HeroBackground } from "@/components/sections/hero/HeroBackground";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { VideoShowcase } from "@/components/ui/video-showcase/VideoShowcase";
 import type { VideoClip, VideoControlsText } from "@/config/video";
+import { HeroText, type HeroTextContent } from "./HeroText";
 
-export type VideoHeroText = {
-  eyebrow: string;
-  title: string;
-  highlight: string;
-  text: string;
-  cta: { label: string; href: string };
-  controls: VideoControlsText;
-};
+export type VideoHeroText = HeroTextContent & { controls: VideoControlsText };
 
 type VideoHeroProps = {
   /** Section id, also used for the heading id. */
@@ -24,7 +16,7 @@ type VideoHeroProps = {
 };
 
 // Single 3D banner (no slider) for inner pages: real footage on a deck of glass screens,
-// same floor and glow as the home hero. Used by Inovação and Carreiras.
+// same floor and glow as the home hero. Used by Inovação, Carreiras and Sobre nós.
 export function VideoHero({ id, text, clips, clipSeconds, labels }: VideoHeroProps) {
   const headingId = `${id}-titulo`;
 
@@ -38,26 +30,7 @@ export function VideoHero({ id, text, clips, clipSeconds, labels }: VideoHeroPro
 
       <div className="container-site py-16 lg:py-20">
         <VideoShowcase clips={clips} clipSeconds={clipSeconds} labels={labels} controls={text.controls}>
-          <p className="flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.22em] text-red motion-safe:animate-rise">
-            <span aria-hidden="true" className="h-[2px] w-10 rounded-full bg-red" />
-            {text.eyebrow}
-          </p>
-
-          <h1
-            id={headingId}
-            className="mt-6 font-display text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-fg motion-safe:animate-rise [animation-delay:120ms]"
-          >
-            {text.title} <span className="text-red">{text.highlight}</span>
-          </h1>
-
-          <p className="mt-5 max-w-[540px] text-[16px] leading-[1.65] text-muted motion-safe:animate-rise [animation-delay:240ms] sm:text-[18px]">
-            {text.text}
-          </p>
-
-          <ButtonLink href={text.cta.href} className="mt-8 motion-safe:animate-rise [animation-delay:360ms]">
-            {text.cta.label}
-            <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
-          </ButtonLink>
+          <HeroText headingId={headingId} text={text} />
         </VideoShowcase>
       </div>
     </section>

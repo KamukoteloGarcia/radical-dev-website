@@ -24,7 +24,7 @@ export const careersEn: CareersContent = {
     title: "Front-end Developer",
     text: "We are looking for a talent passionate about building exceptional interfaces. You will work with React, Next.js and Tailwind CSS, focused on high-performance UI/UX for users in Angola and around the world.",
     tags: ["React", "Next.js", "UI/UX"],
-    cta: { label: "Apply now", href: "#contactos" },
+    cta: { label: "Apply now", href: "/contactos" },
     imageAlt: "A developer's hands writing code on a laptop",
   },
 
@@ -34,9 +34,9 @@ export const careersEn: CareersContent = {
     details: "View details",
     count: { one: "{n} opening available", other: "{n} openings available" },
     items: [
-      { id: "hr", title: "Human Resources", count: 1, href: "#contactos" },
-      { id: "tech", title: "Information Technology", count: 4, href: "#contactos" },
-      { id: "marketing", title: "Marketing & Advertising", count: 1, href: "#contactos" },
+      { id: "hr", title: "Human Resources", count: 1, href: "/contactos" },
+      { id: "tech", title: "Information Technology", count: 4, href: "/contactos" },
+      { id: "marketing", title: "Marketing & Advertising", count: 1, href: "/contactos" },
     ],
   },
 };

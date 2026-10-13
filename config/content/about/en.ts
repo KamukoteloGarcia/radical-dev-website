@@ -11,7 +11,7 @@ export const aboutEn: AboutContent = {
   title: "Angolan technology with",
   highlight: "purpose.",
   text: "We are engineers, designers and creatives from Luanda building digital solutions for companies, governments and communities, proud of our roots.",
-  cta: { label: "Talk to us", href: "#contactos" },
+  cta: { label: "Talk to us", href: "/contactos" },
   chapters: {
     vision: "Our vision",
     talent: "Angolan talent",
