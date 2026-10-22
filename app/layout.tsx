@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { Splash } from "@/components/layout/splash/Splash";
 import { site } from "@/config/site";
 import { getContent, getLanguage, getTheme } from "@/lib/preferences";
 import "./globals.css";
@@ -44,7 +45,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
-  const [language, theme] = await Promise.all([getLanguage(), getTheme()]);
+  const [language, theme, t] = await Promise.all([getLanguage(), getTheme(), getContent()]);
 
   return (
     <html
@@ -53,7 +54,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${poppins.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <Splash labels={t.splash} />
+        {children}
+      </body>
     </html>
   );
 }

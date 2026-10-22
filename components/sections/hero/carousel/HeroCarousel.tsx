@@ -2,6 +2,7 @@
 
 import { Children, useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { cn } from "@/lib/cn";
+import { usePageReady } from "@/lib/page-ready";
 import { HeroControls } from "./HeroControls";
 
 type HeroCarouselProps = {
@@ -29,7 +30,9 @@ export function HeroCarousel({ children, tones, intervalMs, labels }: HeroCarous
   const [hasMoved, setHasMoved] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const rootRef = useRef<HTMLDivElement>(null);
-  const isRunning = isVisible;
+  // Autoplay starts once the splash has gone.
+  const isReady = usePageReady();
+  const isRunning = isVisible && isReady;
 
   function show(index: number, dir: 1 | -1) {
     if (index === active) return;

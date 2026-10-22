@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useSyncExternalStore } from "react";
+import { usePageReady } from "@/lib/page-ready";
 
 const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
 
@@ -22,10 +23,13 @@ export function VideoScreen({ video, poster }: VideoScreenProps) {
     () => false,
   );
 
+  // The video starts once the splash has gone.
+  const isReady = usePageReady();
+
   useEffect(() => {
     const element = videoRef.current;
     if (!element) return;
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || !isReady) {
       element.pause();
       return;
     }
@@ -35,7 +39,7 @@ export function VideoScreen({ video, poster }: VideoScreenProps) {
     });
     observer.observe(element);
     return () => observer.disconnect();
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, isReady]);
 
   return (
     <div aria-hidden="true" className="relative mx-auto w-full max-w-[660px] perspective-[1600px]">

@@ -298,3 +298,176 @@ body {
     transform: translateY(6px);
   }
 }
+
+/* ---------- Splash (every full page load) ---------- */
+
+/* Page animations wait for the splash to leave (only when scripts run, so they never stay hidden). */
+@media (scripting: enabled) {
+  html:not([data-ready]) main * {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Fail-safe: even if JavaScript never runs, the splash goes away on its own. */
+.splash {
+  animation: splash-failsafe 0.6s 9s forwards;
+}
+
+/* Hidden until it starts drawing: a zero-length dash could still show as a dot. */
+.splash-draw {
+  opacity: 0;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: splash-draw 1.1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.splash-fill {
+  opacity: 0;
+  animation: splash-fade 0.6s ease forwards;
+}
+
+.splash-leg {
+  opacity: 0;
+  animation: splash-leg 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.splash-letter {
+  opacity: 0;
+  animation: splash-letter 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.splash-fade {
+  opacity: 0;
+  animation: splash-fade 0.8s ease forwards;
+}
+
+.splash-bar {
+  scale: 0 1;
+  animation: splash-bar 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.splash-glow {
+  animation: splash-glow 2.4s ease-in-out infinite;
+}
+
+/* Leaving: the content fades, the bar completes and the curtain opens. */
+.splash-leave .splash-content {
+  animation: splash-content-out 0.45s ease forwards;
+}
+
+.splash-leave .splash-bar {
+  scale: 1 1;
+  transition: scale 0.3s ease;
+}
+
+.splash-leave .splash-curtain {
+  animation: splash-curtain 0.8s 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.splash-leave .splash-curtain-right {
+  --curtain-to: 100%;
+}
+
+@keyframes splash-failsafe {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes splash-draw {
+  0% {
+    opacity: 0;
+  }
+  4%,
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes splash-leg {
+  from {
+    opacity: 0;
+    translate: -6px -6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes splash-letter {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes splash-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes splash-bar {
+  to {
+    scale: 0.9 1;
+  }
+}
+
+@keyframes splash-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+    scale: 0.92;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.06;
+  }
+}
+
+@keyframes splash-content-out {
+  to {
+    opacity: 0;
+    scale: 0.94;
+  }
+}
+
+@keyframes splash-curtain {
+  to {
+    translate: var(--curtain-to, -100%) 0;
+  }
+}
+
+/* Less motion: show the finished logo at once and simply fade the splash out. */
+@media (prefers-reduced-motion: reduce) {
+  .splash-draw,
+  .splash-fill,
+  .splash-leg,
+  .splash-letter,
+  .splash-fade,
+  .splash-bar,
+  .splash-glow {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+
+  .splash-leave {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .splash-leave .splash-content,
+  .splash-leave .splash-curtain {
+    animation: none;
+  }
+}

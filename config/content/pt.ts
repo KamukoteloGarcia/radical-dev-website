@@ -301,6 +301,7 @@ export const pt = {
   contactPage: contactPagePt,
   ecosystem: ecosystemPt,
   services: servicesPt,
+  splash: { status: "A carregar o site", tagline: "Code & Create", message: "A preparar a sua experiência digital…" },
 
   footer: {
     cta: {

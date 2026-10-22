@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import type { VideoClip, VideoControlsText } from "@/config/video";
+import { usePageReady } from "@/lib/page-ready";
 import { ChapterNav } from "./ChapterNav";
 import { VideoDeck } from "./VideoDeck";
 
@@ -36,7 +37,9 @@ export function VideoShowcase({ children, clips, clipSeconds, labels, controls }
   const [active, setActive] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
 
-  const playing = !prefersReducedMotion && isVisible;
+  const isReady = usePageReady();
+  // Videos start once the splash has gone.
+  const playing = isReady && !prefersReducedMotion && isVisible;
 
   useEffect(() => {
     const root = rootRef.current;

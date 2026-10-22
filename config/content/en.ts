@@ -267,6 +267,7 @@ export const en: Content = {
   contactPage: contactPageEn,
   ecosystem: ecosystemEn,
   services: servicesEn,
+  splash: { status: "Loading the site", tagline: "Code & Create", message: "Preparing your digital experience…" },
 
   footer: {
     cta: {
